@@ -1,0 +1,727 @@
+/**
+ * BS SOFTTECH SOLUTION — Main JavaScript
+ * Version: 1.0 | Global IT Services Website
+ */
+
+'use strict';
+
+/* ============================================================
+   PRELOADER
+   ============================================================ */
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+  setTimeout(() => {
+    preloader.classList.add('hidden');
+  }, 2200);
+});
+
+/* ============================================================
+   PARTICLE CANVAS
+   ============================================================ */
+(function initParticles() {
+  const canvas = document.getElementById('particle-canvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  let animId;
+  let mouse = { x: -9999, y: -9999 };
+
+  function resize() {
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+
+  function createParticles() {
+    const count = Math.min(120, Math.floor((canvas.width * canvas.height) / 9000));
+    particles = [];
+    for (let i = 0; i < count; i++) {
+      particles.push({
+        x:  Math.random() * canvas.width,
+        y:  Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        r:  Math.random() * 1.8 + 0.6,
+        opacity: Math.random() * 0.5 + 0.15
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw connections
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 130) {
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(2, 97, 244, ${0.12 * (1 - dist / 130)})`;
+          ctx.lineWidth = 0.6;
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+        }
+      }
+      // Mouse interaction
+      const mdx = particles[i].x - mouse.x;
+      const mdy = particles[i].y - mouse.y;
+      const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+      if (mdist < 120) {
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(0, 207, 255, ${0.2 * (1 - mdist / 120)})`;
+        ctx.lineWidth = 0.8;
+        ctx.moveTo(particles[i].x, particles[i].y);
+        ctx.lineTo(mouse.x, mouse.y);
+        ctx.stroke();
+      }
+    }
+
+    // Draw particles
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(2, 97, 244, ${p.opacity})`;
+      ctx.fill();
+    });
+  }
+
+  function update() {
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+    });
+  }
+
+  function animate() {
+    draw();
+    update();
+    animId = requestAnimationFrame(animate);
+  }
+
+  // Init
+  resize();
+  createParticles();
+  animate();
+
+  // Resize handler
+  const resizeObs = new ResizeObserver(() => {
+    cancelAnimationFrame(animId);
+    resize();
+    createParticles();
+    animate();
+  });
+  resizeObs.observe(canvas.parentElement);
+
+  // Mouse tracking
+  const hero = document.getElementById('home');
+  if (hero) {
+    hero.addEventListener('mousemove', e => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+    hero.addEventListener('mouseleave', () => {
+      mouse.x = -9999;
+      mouse.y = -9999;
+    });
+  }
+})();
+
+/* ============================================================
+   TYPING ANIMATION
+   ============================================================ */
+(function initTyping() {
+  const el = document.getElementById('typing-text');
+  if (!el) return;
+
+  const words = [
+    'Web Applications',
+    'Mobile Apps',
+    'Cloud Solutions',
+    'AI & ML Systems',
+    'Digital Growth',
+    'Secure Software',
+    'IoT Platforms',
+    'Your Vision'
+  ];
+
+  let wordIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  function type() {
+    const current = words[wordIndex];
+    if (deleting) {
+      el.textContent = current.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      el.textContent = current.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    let speed = deleting ? 55 : 100;
+
+    if (!deleting && charIndex === current.length) {
+      speed = 2000;
+      deleting = true;
+    } else if (deleting && charIndex === 0) {
+      deleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      speed = 400;
+    }
+
+    setTimeout(type, speed);
+  }
+
+  setTimeout(type, 800);
+})();
+
+/* ============================================================
+   STICKY HEADER
+   ============================================================ */
+(function initStickyHeader() {
+  const header = document.getElementById('site-header');
+  if (!header) return;
+
+  function onScroll() {
+    if (window.scrollY > 80) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+/* ============================================================
+   MOBILE NAVIGATION
+   ============================================================ */
+(function initMobileNav() {
+  const hamburger  = document.getElementById('hamburger');
+  const navLinks   = document.getElementById('navLinks');
+  if (!hamburger || !navLinks) return;
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen.toString());
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // Close on link click
+  navLinks.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', e => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+})();
+
+/* ============================================================
+   ACTIVE NAV LINK ON SCROLL
+   ============================================================ */
+(function initActiveNav() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  if (!sections.length || !navLinks.length) return;
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href') || '';
+          link.classList.toggle('active', href === `#${id}`);
+        });
+      }
+    });
+  }, { rootMargin: '-50% 0px -50% 0px' });
+
+  sections.forEach(s => obs.observe(s));
+})();
+
+/* ============================================================
+   SCROLL ANIMATION (AOS-like)
+   ============================================================ */
+(function initScrollAnimations() {
+  const elements = document.querySelectorAll('[data-aos]');
+  if (!elements.length) return;
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const delay = parseInt(el.getAttribute('data-aos-delay') || '0');
+        setTimeout(() => {
+          el.classList.add('aos-animate');
+        }, delay);
+        obs.unobserve(el);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  elements.forEach(el => obs.observe(el));
+})();
+
+/* ============================================================
+   COUNTER ANIMATION
+   ============================================================ */
+(function initCounters() {
+  const counters = document.querySelectorAll('.stat-num[data-target]');
+  if (!counters.length) return;
+
+  let started = false;
+
+  function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function startCounters() {
+    if (started) return;
+    started = true;
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-target'), 10);
+      const duration = 2000;
+      const start = performance.now();
+
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        counter.textContent = Math.floor(easeOut(progress) * target);
+        if (progress < 1) requestAnimationFrame(update);
+        else counter.textContent = target;
+      }
+
+      requestAnimationFrame(update);
+    });
+  }
+
+  const obs = new IntersectionObserver(entries => {
+    if (entries.some(e => e.isIntersecting)) startCounters();
+  }, { threshold: 0.3 });
+
+  const statsSection = document.querySelector('.stats-section');
+  if (statsSection) obs.observe(statsSection);
+})();
+
+/* ============================================================
+   SERVICE TABS FILTER
+   ============================================================ */
+(function initServiceFilter() {
+  const tabs  = document.querySelectorAll('.stab');
+  const cards = document.querySelectorAll('.service-card');
+  if (!tabs.length || !cards.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const filter = tab.getAttribute('data-filter');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (filter === 'all' || cat === filter) {
+          card.classList.remove('hidden-filter');
+          card.style.animation = 'fadeIn 0.4s ease both';
+        } else {
+          card.classList.add('hidden-filter');
+        }
+      });
+    });
+  });
+})();
+
+/* ============================================================
+   PORTFOLIO FILTER
+   ============================================================ */
+(function initPortfolioFilter() {
+  const btns  = document.querySelectorAll('.pfbtn');
+  const cards = document.querySelectorAll('.portfolio-card');
+  if (!btns.length || !cards.length) return;
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-pf');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-cat');
+        if (filter === 'all' || cat === filter) {
+          card.classList.remove('pf-hidden');
+          card.style.animation = 'fadeIn 0.4s ease both';
+        } else {
+          card.classList.add('pf-hidden');
+        }
+      });
+    });
+  });
+})();
+
+/* ============================================================
+   ABOUT TABS
+   ============================================================ */
+(function initAboutTabs() {
+  const tabs     = document.querySelectorAll('.atab');
+  const contents = document.querySelectorAll('.about-tab-content');
+  if (!tabs.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+      tab.classList.add('active');
+      const target = document.getElementById(`tab-${tab.getAttribute('data-tab')}`);
+      if (target) target.classList.add('active');
+    });
+  });
+})();
+
+/* ============================================================
+   FAQ ACCORDION
+   ============================================================ */
+(function initFAQ() {
+  const items = document.querySelectorAll('.faq-item');
+  if (!items.length) return;
+
+  items.forEach(item => {
+    const btn = item.querySelector('.faq-q');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+      items.forEach(i => i.classList.remove('active'));
+      if (!isOpen) item.classList.add('active');
+    });
+  });
+})();
+
+/* ============================================================
+   PRICING TOGGLE
+   ============================================================ */
+(function initPricingToggle() {
+  const toggle    = document.getElementById('ptSwitch');
+  const monthLabel = document.getElementById('pt-monthly');
+  const yearLabel  = document.getElementById('pt-yearly');
+  const amounts    = document.querySelectorAll('.pr-amount[data-monthly]');
+  if (!toggle) return;
+
+  let isYearly = false;
+
+  toggle.addEventListener('click', () => {
+    isYearly = !isYearly;
+    toggle.classList.toggle('yearly', isYearly);
+    monthLabel.classList.toggle('active', !isYearly);
+    yearLabel.classList.toggle('active', isYearly);
+    amounts.forEach(el => {
+      el.textContent = isYearly
+        ? el.getAttribute('data-yearly')
+        : el.getAttribute('data-monthly');
+    });
+  });
+})();
+
+/* ============================================================
+   TESTIMONIAL SWIPER
+   ============================================================ */
+(function initSwiper() {
+  if (typeof Swiper === 'undefined') return;
+  new Swiper('.testimonial-swiper', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 24,
+    autoplay: { delay: 5000, disableOnInteraction: false },
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    },
+    a11y: {
+      prevSlideMessage: 'Previous testimonial',
+      nextSlideMessage: 'Next testimonial'
+    }
+  });
+})();
+
+/* ============================================================
+   SMOOTH SCROLL FOR ALL ANCHOR LINKS
+   ============================================================ */
+(function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      const href = anchor.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      const headerHeight = document.getElementById('site-header')?.offsetHeight || 80;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+})();
+
+/* ============================================================
+   BACK TO TOP BUTTON
+   ============================================================ */
+(function initBackToTop() {
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 500);
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
+/* ============================================================
+   COOKIE NOTICE
+   ============================================================ */
+(function initCookieNotice() {
+  const notice  = document.getElementById('cookieNotice');
+  const accept  = document.getElementById('cookieAccept');
+  const decline = document.getElementById('cookieDecline');
+  if (!notice) return;
+
+  if (localStorage.getItem('bss_cookie_consent')) return;
+
+  setTimeout(() => notice.classList.add('show'), 3000);
+
+  function dismiss() {
+    notice.classList.remove('show');
+    setTimeout(() => notice.remove(), 500);
+  }
+
+  accept?.addEventListener('click', () => {
+    localStorage.setItem('bss_cookie_consent', 'accepted');
+    dismiss();
+  });
+
+  decline?.addEventListener('click', () => {
+    localStorage.setItem('bss_cookie_consent', 'declined');
+    dismiss();
+  });
+})();
+
+/* ============================================================
+   CONTACT FORM VALIDATION & SUBMISSION
+   ============================================================ */
+(function initContactForm() {
+  const form        = document.getElementById('contactForm');
+  if (!form) return;
+
+  const nameInput   = document.getElementById('fname');
+  const emailInput  = document.getElementById('femail');
+  const msgInput    = document.getElementById('fmessage');
+  const nameErr     = document.getElementById('nameError');
+  const emailErr    = document.getElementById('emailError');
+  const msgErr      = document.getElementById('messageError');
+  const submitBtn   = document.getElementById('submitBtn');
+  const btnText     = submitBtn?.querySelector('.btn-text');
+  const btnLoading  = submitBtn?.querySelector('.btn-loading');
+  const successMsg  = document.getElementById('formSuccess');
+
+  function showError(el, msg) {
+    if (!el) return;
+    el.textContent = msg;
+    el.classList.add('show');
+  }
+
+  function clearErrors() {
+    [nameErr, emailErr, msgErr].forEach(e => {
+      if (e) { e.textContent = ''; e.classList.remove('show'); }
+    });
+  }
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function sanitize(str) {
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    clearErrors();
+
+    let valid = true;
+    const name  = sanitize(nameInput?.value.trim() || '');
+    const email = sanitize(emailInput?.value.trim() || '');
+    const msg   = sanitize(msgInput?.value.trim() || '');
+
+    if (!name || name.length < 2) {
+      showError(nameErr, 'Please enter your full name (min 2 characters).');
+      valid = false;
+    }
+
+    if (!email || !validateEmail(email)) {
+      showError(emailErr, 'Please enter a valid email address.');
+      valid = false;
+    }
+
+    if (!msg || msg.length < 10) {
+      showError(msgErr, 'Please describe your project (min 10 characters).');
+      valid = false;
+    }
+
+    if (!valid) return;
+
+    // Simulate form submission
+    if (btnText)    btnText.style.display    = 'none';
+    if (btnLoading) btnLoading.style.display = 'inline-flex';
+    submitBtn.disabled = true;
+
+    setTimeout(() => {
+      if (btnText)    btnText.style.display    = 'inline-flex';
+      if (btnLoading) btnLoading.style.display = 'none';
+      submitBtn.disabled = false;
+      form.reset();
+      if (successMsg) {
+        successMsg.style.display = 'block';
+        setTimeout(() => { successMsg.style.display = 'none'; }, 6000);
+      }
+    }, 2000);
+  });
+})();
+
+/* ============================================================
+   NAVBAR LOGO ICON GLITCH EFFECT
+   ============================================================ */
+(function initLogoHover() {
+  const logos = document.querySelectorAll('.logo-hex');
+  logos.forEach(logo => {
+    logo.addEventListener('mouseenter', () => {
+      logo.style.animation = 'none';
+      logo.style.transform = 'scale(1.2) rotate(30deg)';
+      logo.style.transition = 'transform 0.3s ease';
+    });
+    logo.addEventListener('mouseleave', () => {
+      logo.style.transform = '';
+    });
+  });
+})();
+
+/* ============================================================
+   DYNAMIC YEAR IN FOOTER
+   ============================================================ */
+(function setYear() {
+  const yearEls = document.querySelectorAll('[data-year]');
+  const year = new Date().getFullYear();
+  yearEls.forEach(el => { el.textContent = year; });
+})();
+
+/* ============================================================
+   LAZY IMAGE LOADING (for future image assets)
+   ============================================================ */
+(function initLazyImages() {
+  const images = document.querySelectorAll('img[data-src]');
+  if (!images.length) return;
+  const imgObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.getAttribute('data-src');
+        img.removeAttribute('data-src');
+        imgObs.unobserve(img);
+      }
+    });
+  });
+  images.forEach(img => imgObs.observe(img));
+})();
+
+/* ============================================================
+   SERVICE CARD TILT EFFECT (desktop)
+   ============================================================ */
+(function initTiltEffect() {
+  if (window.matchMedia('(hover: none)').matches) return;
+  const cards = document.querySelectorAll('.service-card, .team-card');
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width  - 0.5;
+      const y = (e.clientY - rect.top)  / rect.height - 0.5;
+      card.style.transform = `translateY(-6px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+})();
+
+/* ============================================================
+   PORTFOLIO CARD 3D HOVER
+   ============================================================ */
+(function initPortfolioHover() {
+  if (window.matchMedia('(hover: none)').matches) return;
+  document.querySelectorAll('.portfolio-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width  - 0.5;
+      const y = (e.clientY - rect.top)  / rect.height - 0.5;
+      card.style.transform = `translateY(-8px) rotateX(${-y * 8}deg) rotateY(${x * 8}deg)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+})();
+
+/* ============================================================
+   KEYBOARD NAVIGATION ACCESSIBILITY
+   ============================================================ */
+(function initA11y() {
+  // Skip to main content enhancement
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      const openNav = document.getElementById('navLinks');
+      const hamburger = document.getElementById('hamburger');
+      if (openNav?.classList.contains('open')) {
+        openNav.classList.remove('open');
+        hamburger?.classList.remove('open');
+        hamburger?.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    }
+  });
+})();
+
+/* ============================================================
+   CONSOLE BRANDING
+   ============================================================ */
+(function consoleBranding() {
+  const styles = [
+    'color: #0261F4',
+    'font-size: 14px',
+    'font-weight: bold',
+    'padding: 8px'
+  ].join(';');
+
+  console.log('%c⬡ BS SOFTTECH SOLUTION', styles);
+  console.log('%cGlobal IT Services | bssofttech.com', 'color: #00CFFF; font-size: 12px;');
+})();

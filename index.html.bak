@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BS SOFTTECH SOLUTION – Global IT services company delivering Web Development, Mobile Apps, Cloud Solutions, AI/ML, Cybersecurity, Digital Marketing and 50+ technology services worldwide. Get a free quote today." />
+  <meta name="keywords" content="BS SOFTTECH SOLUTION, IT company, web development, mobile app development, cloud solutions, artificial intelligence, machine learning, cybersecurity, digital marketing, SEO, software development, IT consulting, blockchain, IoT, DevOps, ERP CRM, UI UX design, data analytics" />
+  <meta name="author" content="BS SOFTTECH SOLUTION" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="theme-color" content="#0261F4" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.bssofttech.com/" />
+  <meta property="og:title" content="BS SOFTTECH SOLUTION | Global IT Services & Software Development" />
+  <meta property="og:description" content="Transforming businesses worldwide with cutting-edge technology. Web, Mobile, Cloud, AI, Cybersecurity & 50+ IT services." />
+  <meta property="og:site_name" content="BS SOFTTECH SOLUTION" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BS SOFTTECH SOLUTION | Global IT Services" />
+  <meta name="twitter:description" content="Transforming businesses worldwide with cutting-edge technology solutions." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.bssofttech.com/" />
+
+  <title>BS SOFTTECH SOLUTION | Global IT Services & Software Development Company</title>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BS SOFTTECH SOLUTION",
+    "alternateName": "BSS",
+    "url": "https://www.bssofttech.com",
+    "logo": "https://www.bssofttech.com/assets/logo.png",
+    "description": "Global IT services company providing comprehensive technology solutions worldwide",
+    "foundingDate": "2024",
+    "areaServed": "Worldwide",
+    "knowsAbout": ["Web Development", "Mobile App Development", "Cloud Computing", "Artificial Intelligence", "Cybersecurity", "Digital Marketing"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": ["English", "Hindi"]
+    },
+    "sameAs": [
+      "https://linkedin.com/company/bssofttech",
+      "https://twitter.com/bssofttech",
+      "https://facebook.com/bssofttech"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader">
+    <div class="preloader-box">
+      <div class="preloader-logo">
+        <span class="pre-icon">&#9109;</span>
+        <span>BSS</span>
+      </div>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar"></div>
+      </div>
+      <p class="pre-tagline">Loading Excellence...</p>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header id="site-header">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <div class="top-info">
+          <a href="mailto:info@bssofttech.com"><i class="fas fa-envelope"></i> info@bssofttech.com</a>
+          <a href="tel:+919876543210"><i class="fas fa-phone"></i> +91 987 654 3210</a>
+          <span><i class="fas fa-clock"></i> Mon–Sat: 9:00 AM – 7:00 PM</span>
+        </div>
+        <div class="top-social">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="#home" class="logo" aria-label="BS SOFTTECH SOLUTION Home">
+          <div class="logo-icon-wrap"><span class="logo-hex">&#9109;</span></div>
+          <div class="logo-text-wrap">
+            <span class="logo-primary">BS <em>SOFTTECH</em></span>
+            <span class="logo-sub">SOLUTION</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main Navigation">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li class="has-dropdown">
+            <a href="#services" class="nav-link">Services <i class="fas fa-chevron-down fa-xs"></i></a>
+            <div class="mega-menu">
+              <div class="mega-col">
+                <h4>Development</h4>
+                <a href="#services"><i class="fas fa-globe"></i> Web Development</a>
+                <a href="#services"><i class="fas fa-mobile-alt"></i> Mobile Apps</a>
+                <a href="#services"><i class="fas fa-code"></i> Custom Software</a>
+                <a href="#services"><i class="fas fa-shopping-cart"></i> E-Commerce</a>
+                <a href="#services"><i class="fas fa-gamepad"></i> Game Development</a>
+              </div>
+              <div class="mega-col">
+                <h4>Cloud & AI</h4>
+                <a href="#services"><i class="fas fa-cloud"></i> Cloud Solutions</a>
+                <a href="#services"><i class="fas fa-brain"></i> AI & Machine Learning</a>
+                <a href="#services"><i class="fas fa-database"></i> Data Analytics</a>
+                <a href="#services"><i class="fas fa-server"></i> DevOps & CI/CD</a>
+                <a href="#services"><i class="fas fa-wifi"></i> IoT Solutions</a>
+              </div>
+              <div class="mega-col">
+                <h4>Digital & Design</h4>
+                <a href="#services"><i class="fas fa-chart-line"></i> Digital Marketing</a>
+                <a href="#services"><i class="fas fa-search"></i> SEO Optimization</a>
+                <a href="#services"><i class="fas fa-paint-brush"></i> UI/UX Design</a>
+                <a href="#services"><i class="fas fa-shield-alt"></i> Cybersecurity</a>
+                <a href="#services"><i class="fas fa-link"></i> Blockchain & Web3</a>
+              </div>
+              <div class="mega-col">
+                <h4>Enterprise</h4>
+                <a href="#services"><i class="fas fa-cogs"></i> ERP & CRM</a>
+                <a href="#services"><i class="fas fa-lightbulb"></i> IT Consulting</a>
+                <a href="#services"><i class="fas fa-vr-cardboard"></i> AR/VR Solutions</a>
+                <a href="#services"><i class="fas fa-bug"></i> QA & Testing</a>
+                <a href="#services"><i class="fas fa-headset"></i> IT Support</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#team" class="nav-link">Team</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#contact" class="btn-get-quote">Get Free Quote <i class="fas fa-arrow-right"></i></a>
+          <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="home" class="hero-section">
+      <canvas id="particle-canvas" aria-hidden="true"></canvas>
+      <div class="hero-blobs" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>🌍 Worldwide IT Services – Trusted in 30+ Countries</span>
+          </div>
+          <h1 class="hero-title">
+            We Build Your<br />
+            <span class="gradient-text" id="typing-text"></span>
+            <span class="cursor-blink">|</span>
+          </h1>
+          <p class="hero-desc">
+            BS SOFTTECH SOLUTION is a global technology powerhouse delivering cutting-edge IT solutions. From startups to enterprises — we transform ideas into powerful digital realities.
+          </p>
+          <div class="hero-btns">
+            <a href="#services" class="btn-primary-lg">Explore Services <i class="fas fa-rocket"></i></a>
+            <a href="#portfolio" class="btn-ghost-lg"><i class="fas fa-play-circle"></i> View Our Work</a>
+          </div>
+          <div class="hero-mini-stats">
+            <div class="mini-stat">
+              <span class="mnum">500+</span>
+              <span class="mlabel">Projects Delivered</span>
+            </div>
+            <div class="divider-v"></div>
+            <div class="mini-stat">
+              <span class="mnum">50+</span>
+              <span class="mlabel">Tech Services</span>
+            </div>
+            <div class="divider-v"></div>
+            <div class="mini-stat">
+              <span class="mnum">30+</span>
+              <span class="mlabel">Countries Served</span>
+            </div>
+            <div class="divider-v"></div>
+            <div class="mini-stat">
+              <span class="mnum">98%</span>
+              <span class="mlabel">Client Satisfaction</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="tech-orbit">
+            <div class="orbit-ring ring-a"></div>
+            <div class="orbit-ring ring-b"></div>
+            <div class="orbit-ring ring-c"></div>
+            <div class="orbit-core">
+              <div class="core-inner">
+                <span class="core-bss">BSS</span>
+                <span class="core-sub">SOLUTION</span>
+              </div>
+            </div>
+            <div class="orbit-dot od1"><i class="fas fa-globe"></i><span>Web Dev</span></div>
+            <div class="orbit-dot od2"><i class="fas fa-brain"></i><span>AI/ML</span></div>
+            <div class="orbit-dot od3"><i class="fas fa-cloud"></i><span>Cloud</span></div>
+            <div class="orbit-dot od4"><i class="fas fa-mobile-alt"></i><span>Mobile</span></div>
+            <div class="orbit-dot od5"><i class="fas fa-shield-alt"></i><span>Security</span></div>
+            <div class="orbit-dot od6"><i class="fas fa-chart-line"></i><span>Marketing</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        <span>Scroll Down</span>
+      </div>
+    </section>
+
+    <!-- ===== CLIENTS MARQUEE ===== -->
+    <section class="clients-section" aria-label="Trusted by global companies">
+      <div class="container">
+        <p class="clients-label">Trusted by companies across the globe</p>
+      </div>
+      <div class="marquee-track">
+        <div class="marquee-inner">
+          <span class="client-chip"><i class="fab fa-aws"></i> AWS Partner</span>
+          <span class="client-chip"><i class="fab fa-google"></i> Google Cloud</span>
+          <span class="client-chip"><i class="fab fa-microsoft"></i> Microsoft Azure</span>
+          <span class="client-chip"><i class="fab fa-shopify"></i> Shopify Expert</span>
+          <span class="client-chip"><i class="fab fa-wordpress"></i> WordPress Agency</span>
+          <span class="client-chip"><i class="fab fa-react"></i> React Specialists</span>
+          <span class="client-chip"><i class="fab fa-node-js"></i> Node.js Experts</span>
+          <span class="client-chip"><i class="fab fa-python"></i> Python/AI</span>
+          <span class="client-chip"><i class="fab fa-android"></i> Android Dev</span>
+          <span class="client-chip"><i class="fab fa-apple"></i> iOS Dev</span>
+          <!-- Duplicate for seamless loop -->
+          <span class="client-chip"><i class="fab fa-aws"></i> AWS Partner</span>
+          <span class="client-chip"><i class="fab fa-google"></i> Google Cloud</span>
+          <span class="client-chip"><i class="fab fa-microsoft"></i> Microsoft Azure</span>
+          <span class="client-chip"><i class="fab fa-shopify"></i> Shopify Expert</span>
+          <span class="client-chip"><i class="fab fa-wordpress"></i> WordPress Agency</span>
+          <span class="client-chip"><i class="fab fa-react"></i> React Specialists</span>
+          <span class="client-chip"><i class="fab fa-node-js"></i> Node.js Experts</span>
+          <span class="client-chip"><i class="fab fa-python"></i> Python/AI</span>
+          <span class="client-chip"><i class="fab fa-android"></i> Android Dev</span>
+          <span class="client-chip"><i class="fab fa-apple"></i> iOS Dev</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS SECTION ===== -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="0">
+            <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+            <div class="stat-num" data-target="500">0</div>
+            <div class="stat-plus">+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="stat-icon"><i class="fas fa-users"></i></div>
+            <div class="stat-num" data-target="300">0</div>
+            <div class="stat-plus">+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stat-icon"><i class="fas fa-globe"></i></div>
+            <div class="stat-num" data-target="30">0</div>
+            <div class="stat-plus">+</div>
+            <div class="stat-label">Countries Served</div>
+          </div>
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="stat-icon"><i class="fas fa-award"></i></div>
+            <div class="stat-num" data-target="50">0</div>
+            <div class="stat-plus">+</div>
+            <div class="stat-label">Tech Services</div>
+          </div>
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="stat-icon"><i class="fas fa-user-tie"></i></div>
+            <div class="stat-num" data-target="75">0</div>
+            <div class="stat-plus">+</div>
+            <div class="stat-label">Expert Team Members</div>
+          </div>
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="500">
+            <div class="stat-icon"><i class="fas fa-star"></i></div>
+            <div class="stat-num" data-target="98">0</div>
+            <div class="stat-plus">%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">What We Offer</span>
+          <h2 class="section-title">50+ Premium IT Services <span class="gradient-text">Worldwide</span></h2>
+          <p class="section-desc">From concept to deployment — we cover every aspect of digital technology to help your business thrive in the modern world.</p>
+        </div>
+
+        <!-- Service Filter Tabs -->
+        <div class="service-tabs" data-aos="fade-up">
+          <button class="stab active" data-filter="all">All Services</button>
+          <button class="stab" data-filter="development">Development</button>
+          <button class="stab" data-filter="cloud-ai">Cloud & AI</button>
+          <button class="stab" data-filter="digital">Digital & Design</button>
+          <button class="stab" data-filter="enterprise">Enterprise</button>
+        </div>
+
+        <div class="services-grid">
+          <!-- Development -->
+          <div class="service-card" data-category="development" data-aos="fade-up" data-aos-delay="0">
+            <div class="sc-icon sc-blue"><i class="fas fa-globe"></i></div>
+            <h3>Web Design & Development</h3>
+            <p>Stunning, high-performance websites and web applications built with the latest technologies — React, Angular, Vue, Next.js & more.</p>
+            <ul class="sc-tags"><li>React.js</li><li>Next.js</li><li>Vue.js</li><li>PHP/Laravel</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card" data-category="development" data-aos="fade-up" data-aos-delay="50">
+            <div class="sc-icon sc-purple"><i class="fas fa-mobile-alt"></i></div>
+            <h3>Mobile App Development</h3>
+            <p>Native and cross-platform mobile apps for iOS and Android. Flutter, React Native, Swift, and Kotlin — we build it all.</p>
+            <ul class="sc-tags"><li>Flutter</li><li>React Native</li><li>Swift</li><li>Kotlin</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card" data-category="development" data-aos="fade-up" data-aos-delay="100">
+            <div class="sc-icon sc-green"><i class="fas fa-code"></i></div>
+            <h3>Custom Software Development</h3>
+            <p>Tailor-made software solutions that perfectly align with your business processes and enable scalable growth.</p>
+            <ul class="sc-tags"><li>Python</li><li>Java</li><li>.NET</li><li>Node.js</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card" data-category="development" data-aos="fade-up" data-aos-delay="150">
+            <div class="sc-icon sc-orange"><i class="fas fa-shopping-cart"></i></div>
+            <h3>E-Commerce Solutions</h3>
+            <p>Powerful online stores with seamless checkout, payment gateway integration, and inventory management systems.</p>
+            <ul class="sc-tags"><li>Shopify</li><li>WooCommerce</li><li>Magento</li><li>Custom</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Cloud & AI -->
+          <div class="service-card" data-category="cloud-ai" data-aos="fade-up" data-aos-delay="0">
+            <div class="sc-icon sc-cyan"><i class="fas fa-cloud"></i></div>
+            <h3>Cloud Computing & Migration</h3>
+            <p>Seamless cloud migration and management on AWS, Azure, and Google Cloud. Scalable, secure, and cost-effective infrastructure.</p>
+            <ul class="sc-tags"><li>AWS</li><li>Azure</li><li>GCP</li><li>Docker/K8s</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card" data-category="cloud-ai" data-aos="fade-up" data-aos-delay="50">
+            <div class="sc-icon sc-blue"><i class="fas fa-brain"></i></div>
+            <h3>Artificial Intelligence & ML</h3>
+            <p>Intelligent AI solutions — chatbots, predictive analytics, computer vision, NLP, and custom ML model development.</p>
+            <ul class="sc-tags"><li>TensorFlow</li><li>PyTorch</li><li>OpenAI</li><li>LangChain</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card" data-category="cloud-ai" data-aos="fade-up" data-aos-delay="100">
+            <div class="sc-icon sc-purple"><i class="fas fa-database"></i></div>
+            <h3>Data Analytics & Business Intelligence</h3>
+            <p>Transform raw data into actionable insights with advanced analytics dashboards, data warehousing, and reporting tools.</p>
+            <ul class="sc-tags"><li>Power BI</li><li>Tableau</li><li>BigQuery</li><li>Spark</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card" data-category="cloud-ai" data-aos="fade-up" data-aos-delay="150">
+            <div class="sc-icon sc-green"><i class="fas fa-server"></i></div>
+            <h3>DevOps & CI/CD Pipelines</h3>
+            <p>Accelerate delivery with automated deployment pipelines, container orchestration, and robust monitoring solutions.</p>
+            <ul class="sc-tags"><li>Jenkins</li><li>GitHub Actions</li><li>Terraform</li><li>Kubernetes</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Digital & Design -->
+          <div class="service-card" data-category="digital" data-aos="fade-up" data-aos-delay="0">
+            <div class="sc-icon sc-orange"><i class="fas fa-chart-line"></i></div>
+            <h3>Digital Marketing & SEO</h3>
+            <p>Dominate search rankings and generate leads with data-driven SEO, PPC, social media marketing, and content strategies.</p>
+            <ul class="sc-tags"><li>SEO</li><li>Google Ads</li><li>Social Media</li><li>Email Mktg</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card" data-category="digital" data-aos="fade-up" data-aos-delay="50">
+            <div class="sc-icon sc-cyan"><i class="fas fa-paint-brush"></i></div>
+            <h3>UI/UX Design</h3>
+            <p>User-first design experiences that convert visitors into customers. Wireframes, prototypes, and pixel-perfect interfaces.</p>
+            <ul class="sc-tags"><li>Figma</li><li>Adobe XD</li><li>Sketch</li><li>Prototyping</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card" data-category="digital" data-aos="fade-up" data-aos-delay="100">
+            <div class="sc-icon sc-blue"><i class="fas fa-shield-alt"></i></div>
+            <h3>Cybersecurity Solutions</h3>
+            <p>Protect your digital assets with penetration testing, vulnerability assessments, VAPT, and 24/7 security monitoring.</p>
+            <ul class="sc-tags"><li>VAPT</li><li>SOC</li><li>ISO 27001</li><li>GDPR</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card" data-category="digital" data-aos="fade-up" data-aos-delay="150">
+            <div class="sc-icon sc-purple"><i class="fas fa-gamepad"></i></div>
+            <h3>Game Development</h3>
+            <p>Immersive 2D/3D games for mobile, web, and desktop platforms using Unity, Unreal Engine, and custom game engines.</p>
+            <ul class="sc-tags"><li>Unity</li><li>Unreal</li><li>HTML5</li><li>AR/VR</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="service-card" data-category="enterprise" data-aos="fade-up" data-aos-delay="0">
+            <div class="sc-icon sc-green"><i class="fas fa-cogs"></i></div>
+            <h3>ERP & CRM Solutions</h3>
+            <p>End-to-end enterprise resource planning and customer relationship management systems tailored for your business workflow.</p>
+            <ul class="sc-tags"><li>SAP</li><li>Salesforce</li><li>Odoo</li><li>Custom ERP</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card" data-category="enterprise" data-aos="fade-up" data-aos-delay="50">
+            <div class="sc-icon sc-orange"><i class="fas fa-link"></i></div>
+            <h3>Blockchain & Web3 Development</h3>
+            <p>Decentralized applications, smart contracts, NFT platforms, DeFi solutions, and blockchain-based enterprise systems.</p>
+            <ul class="sc-tags"><li>Ethereum</li><li>Solidity</li><li>Web3.js</li><li>NFT/DeFi</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card" data-category="enterprise" data-aos="fade-up" data-aos-delay="100">
+            <div class="sc-icon sc-cyan"><i class="fas fa-wifi"></i></div>
+            <h3>IoT Solutions</h3>
+            <p>Connect the physical and digital worlds with custom IoT solutions — smart devices, automation, real-time monitoring.</p>
+            <ul class="sc-tags"><li>Arduino</li><li>Raspberry Pi</li><li>MQTT</li><li>Edge AI</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card" data-category="enterprise" data-aos="fade-up" data-aos-delay="150">
+            <div class="sc-icon sc-blue"><i class="fas fa-lightbulb"></i></div>
+            <h3>IT Consulting & Strategy</h3>
+            <p>Expert technology consulting to align your IT strategy with business goals, digital transformation, and modernisation roadmaps.</p>
+            <ul class="sc-tags"><li>Strategy</li><li>Digital Trans.</li><li>Audit</li><li>Roadmap</li></ul>
+            <a href="#contact" class="sc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="services-cta" data-aos="fade-up">
+          <p>Don't see your requirement? We offer <strong>50+ specialized services</strong>.</p>
+          <a href="#contact" class="btn-primary-lg">Discuss Your Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="why-section">
+      <div class="container">
+        <div class="why-grid">
+          <div class="why-content" data-aos="fade-right">
+            <span class="section-tag">Why Choose Us</span>
+            <h2 class="section-title">We Don't Just Build — We <span class="gradient-text">Transform</span></h2>
+            <p>BS SOFTTECH SOLUTION is more than an IT company. We're your long-term technology partner dedicated to your growth and success. Here's why 300+ clients trust us globally:</p>
+            <div class="why-features">
+              <div class="why-feat">
+                <div class="wf-icon"><i class="fas fa-rocket"></i></div>
+                <div>
+                  <h4>Rapid Delivery</h4>
+                  <p>Agile methodology ensures on-time delivery without compromising quality.</p>
+                </div>
+              </div>
+              <div class="why-feat">
+                <div class="wf-icon"><i class="fas fa-lock"></i></div>
+                <div>
+                  <h4>Security First</h4>
+                  <p>Every solution is built with enterprise-grade security standards from day one.</p>
+                </div>
+              </div>
+              <div class="why-feat">
+                <div class="wf-icon"><i class="fas fa-headset"></i></div>
+                <div>
+                  <h4>24/7 Support</h4>
+                  <p>Round-the-clock dedicated support to keep your business running smoothly.</p>
+                </div>
+              </div>
+              <div class="why-feat">
+                <div class="wf-icon"><i class="fas fa-dollar-sign"></i></div>
+                <div>
+                  <h4>Transparent Pricing</h4>
+                  <p>No hidden costs. Clear, upfront pricing with measurable ROI.</p>
+                </div>
+              </div>
+            </div>
+            <a href="#about" class="btn-primary-lg">Learn More About Us <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="why-visual" data-aos="fade-left">
+            <div class="why-cards-stack">
+              <div class="wstack-card wsc-1">
+                <i class="fas fa-check-circle"></i>
+                <span>500+ Projects Delivered on Time</span>
+              </div>
+              <div class="wstack-card wsc-2">
+                <i class="fas fa-star"></i>
+                <span>5-Star Average Client Rating</span>
+              </div>
+              <div class="wstack-card wsc-3">
+                <i class="fas fa-globe"></i>
+                <span>Active in 30+ Countries</span>
+              </div>
+              <div class="wstack-card wsc-4">
+                <i class="fas fa-shield-check"></i>
+                <span>ISO Certified Processes</span>
+              </div>
+              <div class="wstack-badge">
+                <div class="badge-ring"></div>
+                <span>10+<br />Yrs Exp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">About Us</span>
+          <h2 class="section-title">Driving <span class="gradient-text">Digital Innovation</span> Worldwide</h2>
+          <p class="section-desc">We are a team of passionate technologists, designers, and strategists on a mission to empower businesses globally through technology.</p>
+        </div>
+
+        <div class="about-tabs-wrap" data-aos="fade-up">
+          <div class="about-tabs">
+            <button class="atab active" data-tab="mission">Our Mission</button>
+            <button class="atab" data-tab="vision">Our Vision</button>
+            <button class="atab" data-tab="values">Our Values</button>
+            <button class="atab" data-tab="history">Our Journey</button>
+          </div>
+
+          <div class="about-tab-content active" id="tab-mission">
+            <div class="about-tab-grid">
+              <div class="about-tab-text">
+                <h3>Our Mission</h3>
+                <p>Our mission is to democratize technology and make world-class IT solutions accessible to businesses of every size — from bootstrapped startups to Fortune 500 enterprises. We believe in building long-term partnerships, not just completing projects.</p>
+                <p>We achieve this by combining deep technical expertise with an unwavering focus on business outcomes, ensuring every solution we deliver creates real, measurable value for our clients.</p>
+                <div class="about-highlights">
+                  <div class="ah-item"><i class="fas fa-check"></i> Client-centric approach in everything we do</div>
+                  <div class="ah-item"><i class="fas fa-check"></i> Cutting-edge technologies for competitive advantage</div>
+                  <div class="ah-item"><i class="fas fa-check"></i> Global reach with local expertise</div>
+                </div>
+              </div>
+              <div class="about-tab-visual mission-visual">
+                <div class="av-icon"><i class="fas fa-bullseye"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-tab-content" id="tab-vision">
+            <div class="about-tab-grid">
+              <div class="about-tab-text">
+                <h3>Our Vision</h3>
+                <p>To be the most trusted and innovative technology company on the planet — recognized for delivering transformational solutions that propel businesses into the future.</p>
+                <p>We envision a world where every business, regardless of location or size, has access to the tools and technology needed to compete and succeed on a global stage.</p>
+                <div class="about-highlights">
+                  <div class="ah-item"><i class="fas fa-check"></i> Global leader in IT services by 2030</div>
+                  <div class="ah-item"><i class="fas fa-check"></i> Offices in 10+ countries worldwide</div>
+                  <div class="ah-item"><i class="fas fa-check"></i> 10,000+ satisfied clients globally</div>
+                </div>
+              </div>
+              <div class="about-tab-visual vision-visual">
+                <div class="av-icon"><i class="fas fa-eye"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-tab-content" id="tab-values">
+            <div class="values-grid">
+              <div class="value-item">
+                <div class="vi-icon"><i class="fas fa-gem"></i></div>
+                <h4>Excellence</h4>
+                <p>We hold ourselves to the highest standards in code quality, design, and delivery.</p>
+              </div>
+              <div class="value-item">
+                <div class="vi-icon"><i class="fas fa-handshake"></i></div>
+                <h4>Integrity</h4>
+                <p>Honest communication, transparent processes, and ethical practices always.</p>
+              </div>
+              <div class="value-item">
+                <div class="vi-icon"><i class="fas fa-lightbulb"></i></div>
+                <h4>Innovation</h4>
+                <p>We constantly explore new technologies and methodologies to stay ahead.</p>
+              </div>
+              <div class="value-item">
+                <div class="vi-icon"><i class="fas fa-users"></i></div>
+                <h4>Collaboration</h4>
+                <p>We work as one team — client and vendor — toward a shared success.</p>
+              </div>
+              <div class="value-item">
+                <div class="vi-icon"><i class="fas fa-leaf"></i></div>
+                <h4>Sustainability</h4>
+                <p>Building technology responsibly with respect for people and the environment.</p>
+              </div>
+              <div class="value-item">
+                <div class="vi-icon"><i class="fas fa-tachometer-alt"></i></div>
+                <h4>Agility</h4>
+                <p>Adapting quickly to change and delivering results at the speed of business.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-tab-content" id="tab-history">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <span class="tl-year">2018</span>
+                  <h4>Foundation</h4>
+                  <p>BS SOFTTECH SOLUTION was founded with a vision to provide world-class IT services to global businesses.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <span class="tl-year">2019</span>
+                  <h4>First 50 Clients</h4>
+                  <p>Rapidly grew to serve 50+ clients across India, USA, and UK with web and mobile solutions.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <span class="tl-year">2020</span>
+                  <h4>Cloud & AI Division</h4>
+                  <p>Launched dedicated Cloud and Artificial Intelligence divisions to serve emerging demand.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <span class="tl-year">2022</span>
+                  <h4>Global Expansion</h4>
+                  <p>Expanded operations to 20+ countries with dedicated regional teams and partnerships.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <span class="tl-year">2024</span>
+                  <h4>500+ Projects & Growing</h4>
+                  <p>Celebrated 500+ successful project deliveries with a growing team of 75+ experts worldwide.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tl-dot tl-current"></div>
+                <div class="tl-content">
+                  <span class="tl-year">2026 →</span>
+                  <h4>The Future is Now</h4>
+                  <p>Expanding AI, Blockchain, and IoT capabilities to shape the next decade of digital transformation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TECHNOLOGIES SECTION ===== -->
+    <section class="tech-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Tech Stack</span>
+          <h2 class="section-title">Powered by <span class="gradient-text">Cutting-Edge Technologies</span></h2>
+          <p class="section-desc">We work with the world's most advanced and in-demand technologies to deliver future-ready solutions.</p>
+        </div>
+
+        <div class="tech-categories" data-aos="fade-up">
+          <div class="tech-cat">
+            <h4 class="tc-title"><i class="fas fa-code"></i> Frontend</h4>
+            <div class="tech-pills">
+              <span class="tp"><i class="fab fa-react"></i> React.js</span>
+              <span class="tp"><i class="fab fa-vuejs"></i> Vue.js</span>
+              <span class="tp">Next.js</span>
+              <span class="tp"><i class="fab fa-angular"></i> Angular</span>
+              <span class="tp">TypeScript</span>
+              <span class="tp">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="tech-cat">
+            <h4 class="tc-title"><i class="fas fa-server"></i> Backend</h4>
+            <div class="tech-pills">
+              <span class="tp"><i class="fab fa-node-js"></i> Node.js</span>
+              <span class="tp"><i class="fab fa-python"></i> Python</span>
+              <span class="tp">Java/Spring</span>
+              <span class="tp">PHP/Laravel</span>
+              <span class="tp">.NET Core</span>
+              <span class="tp">Go Lang</span>
+            </div>
+          </div>
+          <div class="tech-cat">
+            <h4 class="tc-title"><i class="fas fa-mobile-alt"></i> Mobile</h4>
+            <div class="tech-pills">
+              <span class="tp">Flutter</span>
+              <span class="tp"><i class="fab fa-react"></i> React Native</span>
+              <span class="tp"><i class="fab fa-apple"></i> Swift</span>
+              <span class="tp"><i class="fab fa-android"></i> Kotlin</span>
+              <span class="tp">Ionic</span>
+            </div>
+          </div>
+          <div class="tech-cat">
+            <h4 class="tc-title"><i class="fas fa-cloud"></i> Cloud & DevOps</h4>
+            <div class="tech-pills">
+              <span class="tp"><i class="fab fa-aws"></i> AWS</span>
+              <span class="tp"><i class="fab fa-microsoft"></i> Azure</span>
+              <span class="tp"><i class="fab fa-google"></i> GCP</span>
+              <span class="tp">Docker</span>
+              <span class="tp">Kubernetes</span>
+              <span class="tp">Terraform</span>
+            </div>
+          </div>
+          <div class="tech-cat">
+            <h4 class="tc-title"><i class="fas fa-brain"></i> AI / ML</h4>
+            <div class="tech-pills">
+              <span class="tp">TensorFlow</span>
+              <span class="tp">PyTorch</span>
+              <span class="tp">OpenAI GPT</span>
+              <span class="tp">LangChain</span>
+              <span class="tp">Scikit-learn</span>
+              <span class="tp">Hugging Face</span>
+            </div>
+          </div>
+          <div class="tech-cat">
+            <h4 class="tc-title"><i class="fas fa-database"></i> Database</h4>
+            <div class="tech-pills">
+              <span class="tp">PostgreSQL</span>
+              <span class="tp">MongoDB</span>
+              <span class="tp">MySQL</span>
+              <span class="tp">Redis</span>
+              <span class="tp">Firebase</span>
+              <span class="tp">Elasticsearch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PORTFOLIO SECTION ===== -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Our Work</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects & Case Studies</span></h2>
+          <p class="section-desc">A glimpse of what we've built for our global clients across industries and technologies.</p>
+        </div>
+
+        <div class="portfolio-filters" data-aos="fade-up">
+          <button class="pfbtn active" data-pf="all">All Projects</button>
+          <button class="pfbtn" data-pf="web">Web Dev</button>
+          <button class="pfbtn" data-pf="mobile">Mobile</button>
+          <button class="pfbtn" data-pf="ai">AI/ML</button>
+          <button class="pfbtn" data-pf="cloud">Cloud</button>
+          <button class="pfbtn" data-pf="design">UI/UX</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+          <div class="portfolio-card" data-cat="web" data-aos="zoom-in">
+            <div class="pc-img pc-img-1">
+              <div class="pc-overlay">
+                <span class="pc-cat">Web Development</span>
+                <h3>FinTech Banking Platform</h3>
+                <p>A comprehensive digital banking platform with real-time transactions, analytics, and multi-currency support.</p>
+                <div class="pc-tags"><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card" data-cat="mobile" data-aos="zoom-in" data-aos-delay="50">
+            <div class="pc-img pc-img-2">
+              <div class="pc-overlay">
+                <span class="pc-cat">Mobile App</span>
+                <h3>HealthCare Mobile App</h3>
+                <p>An all-in-one patient-doctor platform with telemedicine, appointment booking, and health tracking features.</p>
+                <div class="pc-tags"><span>Flutter</span><span>Firebase</span><span>AI Diagnosis</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card" data-cat="ai" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pc-img pc-img-3">
+              <div class="pc-overlay">
+                <span class="pc-cat">AI/ML Solution</span>
+                <h3>AI Inventory Management</h3>
+                <p>Machine learning-powered inventory system predicting demand, reducing waste by 40% for a retail chain.</p>
+                <div class="pc-tags"><span>Python</span><span>TensorFlow</span><span>AWS</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card" data-cat="cloud" data-aos="zoom-in" data-aos-delay="150">
+            <div class="pc-img pc-img-4">
+              <div class="pc-overlay">
+                <span class="pc-cat">Cloud Migration</span>
+                <h3>Enterprise Cloud Migration</h3>
+                <p>Migrated a 500-employee enterprise to AWS cloud, reducing infrastructure costs by 60% with zero downtime.</p>
+                <div class="pc-tags"><span>AWS</span><span>Terraform</span><span>Docker</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card" data-cat="design" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pc-img pc-img-5">
+              <div class="pc-overlay">
+                <span class="pc-cat">UI/UX Design</span>
+                <h3>SaaS Dashboard Redesign</h3>
+                <p>Complete UX overhaul of a SaaS product that increased user engagement by 78% and reduced churn rate.</p>
+                <div class="pc-tags"><span>Figma</span><span>User Research</span><span>A/B Testing</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card" data-cat="web" data-aos="zoom-in" data-aos-delay="250">
+            <div class="pc-img pc-img-6">
+              <div class="pc-overlay">
+                <span class="pc-cat">E-Commerce</span>
+                <h3>Multi-Vendor Marketplace</h3>
+                <p>A Shopify-powered marketplace serving 1000+ vendors with custom features, analytics, and payment systems.</p>
+                <div class="pc-tags"><span>Shopify</span><span>React</span><span>Stripe</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-cta" data-aos="fade-up">
+          <a href="#contact" class="btn-primary-lg">Start Your Project <i class="fas fa-rocket"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROCESS SECTION ===== -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">How We Work</span>
+          <h2 class="section-title">Our <span class="gradient-text">Proven Process</span></h2>
+          <p class="section-desc">A transparent, structured approach that delivers results every time.</p>
+        </div>
+        <div class="process-steps" data-aos="fade-up">
+          <div class="process-step">
+            <div class="ps-num">01</div>
+            <div class="ps-icon"><i class="fas fa-comments"></i></div>
+            <h4>Discovery & Consultation</h4>
+            <p>We listen deeply to understand your goals, challenges, and vision. Free initial consultation.</p>
+          </div>
+          <div class="ps-arrow"><i class="fas fa-chevron-right"></i></div>
+          <div class="process-step">
+            <div class="ps-num">02</div>
+            <div class="ps-icon"><i class="fas fa-drafting-compass"></i></div>
+            <h4>Strategy & Planning</h4>
+            <p>We create a detailed roadmap, tech stack selection, timeline, and clear deliverables.</p>
+          </div>
+          <div class="ps-arrow"><i class="fas fa-chevron-right"></i></div>
+          <div class="process-step">
+            <div class="ps-num">03</div>
+            <div class="ps-icon"><i class="fas fa-code"></i></div>
+            <h4>Design & Development</h4>
+            <p>Our expert team builds your solution with regular updates and milestone reviews.</p>
+          </div>
+          <div class="ps-arrow"><i class="fas fa-chevron-right"></i></div>
+          <div class="process-step">
+            <div class="ps-num">04</div>
+            <div class="ps-icon"><i class="fas fa-bug"></i></div>
+            <h4>Testing & QA</h4>
+            <p>Rigorous quality assurance including performance, security, and usability testing.</p>
+          </div>
+          <div class="ps-arrow"><i class="fas fa-chevron-right"></i></div>
+          <div class="process-step">
+            <div class="ps-num">05</div>
+            <div class="ps-icon"><i class="fas fa-rocket"></i></div>
+            <h4>Launch & Support</h4>
+            <p>Smooth deployment followed by ongoing 24/7 support, monitoring, and optimization.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEAM SECTION ===== -->
+    <section id="team" class="team-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Meet The Team</span>
+          <h2 class="section-title">The <span class="gradient-text">Brilliant Minds</span> Behind BSS</h2>
+          <p class="section-desc">Our diverse team of world-class experts is united by a passion for technology and a commitment to your success.</p>
+        </div>
+        <div class="team-grid">
+          <div class="team-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="tc-photo tc-photo-1">
+              <div class="tc-avatar"><span>BS</span></div>
+            </div>
+            <div class="tc-info">
+              <h3>Babu Sharma</h3>
+              <span class="tc-role">CEO & Founder</span>
+              <p>Technology visionary with 15+ years of experience building global IT solutions and scaling businesses.</p>
+              <div class="tc-social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="tc-photo tc-photo-2">
+              <div class="tc-avatar"><span>RK</span></div>
+            </div>
+            <div class="tc-info">
+              <h3>Rahul Kumar</h3>
+              <span class="tc-role">Chief Technology Officer</span>
+              <p>Full-stack architect specializing in cloud-native applications, microservices, and AI-driven platforms.</p>
+              <div class="tc-social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="tc-photo tc-photo-3">
+              <div class="tc-avatar"><span>PD</span></div>
+            </div>
+            <div class="tc-info">
+              <h3>Priya Devi</h3>
+              <span class="tc-role">Head of UI/UX Design</span>
+              <p>Award-winning designer crafting intuitive digital experiences that delight users and drive conversions.</p>
+              <div class="tc-social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="tc-photo tc-photo-4">
+              <div class="tc-avatar"><span>AK</span></div>
+            </div>
+            <div class="tc-info">
+              <h3>Arjun Kapoor</h3>
+              <span class="tc-role">AI/ML Lead Engineer</span>
+              <p>Machine learning engineer pioneering AI solutions including LLMs, computer vision, and predictive analytics.</p>
+              <div class="tc-social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="tc-photo tc-photo-5">
+              <div class="tc-avatar"><span>SM</span></div>
+            </div>
+            <div class="tc-info">
+              <h3>Sneha Mehta</h3>
+              <span class="tc-role">Digital Marketing Director</span>
+              <p>SEO and digital growth strategist with a track record of ranking clients on Google's first page worldwide.</p>
+              <div class="tc-social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="tc-photo tc-photo-6">
+              <div class="tc-avatar"><span>VS</span></div>
+            </div>
+            <div class="tc-info">
+              <h3>Vikram Singh</h3>
+              <span class="tc-role">Cloud & DevOps Architect</span>
+              <p>AWS-certified architect specializing in cloud infrastructure, Kubernetes, and enterprise-scale DevOps pipelines.</p>
+              <div class="tc-social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Client Stories</span>
+          <h2 class="section-title">What Our Clients Say About <span class="gradient-text">BS SOFTTECH</span></h2>
+          <p class="section-desc">Real results. Real feedback. From real clients across the world.</p>
+        </div>
+
+        <div class="swiper testimonial-swiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testi-card">
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>"BS SOFTTECH SOLUTION completely transformed our business. Their web platform increased our revenue by 180% in just 8 months. The team is professional, responsive, and truly world-class."</blockquote>
+                <div class="testi-author">
+                  <div class="ta-avatar ta-av1">JA</div>
+                  <div>
+                    <strong>John Anderson</strong>
+                    <span>CEO, TechCorp USA</span>
+                    <span class="ta-location"><i class="fas fa-map-marker-alt"></i> United States</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testi-card">
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>"Their mobile app development team built exactly what we envisioned — on time and within budget. The app now has 100K+ downloads. I cannot recommend them highly enough!"</blockquote>
+                <div class="testi-author">
+                  <div class="ta-avatar ta-av2">PS</div>
+                  <div>
+                    <strong>Priya Sharma</strong>
+                    <span>MD, InnovateTech India</span>
+                    <span class="ta-location"><i class="fas fa-map-marker-alt"></i> India</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testi-card">
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>"Outstanding cloud migration experience. BSS moved our entire infrastructure to AWS with zero downtime, saving us $50K per year. Their DevOps expertise is unmatched."</blockquote>
+                <div class="testi-author">
+                  <div class="ta-avatar ta-av3">DM</div>
+                  <div>
+                    <strong>David Miller</strong>
+                    <span>CTO, GlobalSoft UK</span>
+                    <span class="ta-location"><i class="fas fa-map-marker-alt"></i> United Kingdom</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testi-card">
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>"The AI-powered system BSS built for us has automated 70% of our manual processes. The ROI has been phenomenal. They're not just developers — they're true technology partners."</blockquote>
+                <div class="testi-author">
+                  <div class="ta-avatar ta-av4">LW</div>
+                  <div>
+                    <strong>Lisa Wang</strong>
+                    <span>Founder, AppNation Singapore</span>
+                    <span class="ta-location"><i class="fas fa-map-marker-alt"></i> Singapore</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testi-card">
+                <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>"BS SOFTTECH's SEO team ranked our e-commerce site on Page 1 of Google in 3 months. Our organic traffic grew by 320%. Their digital marketing expertise is truly exceptional."</blockquote>
+                <div class="testi-author">
+                  <div class="ta-avatar ta-av5">MR</div>
+                  <div>
+                    <strong>Mohammed Rashid</strong>
+                    <span>Owner, ShopEase Dubai</span>
+                    <span class="ta-location"><i class="fas fa-map-marker-alt"></i> UAE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRICING SECTION ===== -->
+    <section id="pricing" class="pricing-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Pricing Plans</span>
+          <h2 class="section-title">Transparent Pricing, <span class="gradient-text">Exceptional Value</span></h2>
+          <p class="section-desc">Choose the plan that fits your needs. All plans include dedicated support and on-time delivery guarantee.</p>
+        </div>
+
+        <div class="pricing-toggle" data-aos="fade-up">
+          <span class="pt-label active" id="pt-monthly">Monthly</span>
+          <div class="pt-switch" id="ptSwitch">
+            <div class="pt-thumb"></div>
+          </div>
+          <span class="pt-label" id="pt-yearly">Yearly <span class="pt-save">Save 20%</span></span>
+        </div>
+
+        <div class="pricing-grid" data-aos="fade-up">
+          <div class="pricing-card">
+            <div class="pr-top">
+              <div class="pr-icon pr-icon-1"><i class="fas fa-seedling"></i></div>
+              <h3>Starter</h3>
+              <p>Perfect for startups and small businesses getting digital.</p>
+            </div>
+            <div class="pr-price">
+              <span class="pr-currency">$</span>
+              <span class="pr-amount" data-monthly="499" data-yearly="399">499</span>
+              <span class="pr-period">/month</span>
+            </div>
+            <ul class="pr-features">
+              <li><i class="fas fa-check"></i> Up to 5-page website / app</li>
+              <li><i class="fas fa-check"></i> Responsive design</li>
+              <li><i class="fas fa-check"></i> Basic SEO optimization</li>
+              <li><i class="fas fa-check"></i> 3 months free support</li>
+              <li><i class="fas fa-check"></i> 1 revision round</li>
+              <li class="pr-disabled"><i class="fas fa-times"></i> Custom integrations</li>
+              <li class="pr-disabled"><i class="fas fa-times"></i> Analytics dashboard</li>
+              <li class="pr-disabled"><i class="fas fa-times"></i> Priority support</li>
+            </ul>
+            <a href="#contact" class="pr-btn">Get Started</a>
+          </div>
+
+          <div class="pricing-card pricing-popular">
+            <div class="pr-badge">Most Popular</div>
+            <div class="pr-top">
+              <div class="pr-icon pr-icon-2"><i class="fas fa-rocket"></i></div>
+              <h3>Professional</h3>
+              <p>Ideal for growing businesses and enterprises needing full solutions.</p>
+            </div>
+            <div class="pr-price">
+              <span class="pr-currency">$</span>
+              <span class="pr-amount" data-monthly="999" data-yearly="799">999</span>
+              <span class="pr-period">/month</span>
+            </div>
+            <ul class="pr-features">
+              <li><i class="fas fa-check"></i> Unlimited pages / features</li>
+              <li><i class="fas fa-check"></i> Advanced UI/UX design</li>
+              <li><i class="fas fa-check"></i> Full SEO + content strategy</li>
+              <li><i class="fas fa-check"></i> 6 months free support</li>
+              <li><i class="fas fa-check"></i> Unlimited revisions</li>
+              <li><i class="fas fa-check"></i> Custom integrations & APIs</li>
+              <li><i class="fas fa-check"></i> Analytics dashboard</li>
+              <li class="pr-disabled"><i class="fas fa-times"></i> Dedicated account manager</li>
+            </ul>
+            <a href="#contact" class="pr-btn pr-btn-primary">Get Started</a>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pr-top">
+              <div class="pr-icon pr-icon-3"><i class="fas fa-building"></i></div>
+              <h3>Enterprise</h3>
+              <p>Custom solutions for large-scale enterprises and complex requirements.</p>
+            </div>
+            <div class="pr-price">
+              <span class="pr-custom">Custom</span>
+              <span class="pr-period">pricing</span>
+            </div>
+            <ul class="pr-features">
+              <li><i class="fas fa-check"></i> Fully custom development</li>
+              <li><i class="fas fa-check"></i> Enterprise architecture</li>
+              <li><i class="fas fa-check"></i> Dedicated development team</li>
+              <li><i class="fas fa-check"></i> 12 months free support</li>
+              <li><i class="fas fa-check"></i> SLA guaranteed</li>
+              <li><i class="fas fa-check"></i> All integrations included</li>
+              <li><i class="fas fa-check"></i> Advanced analytics & BI</li>
+              <li><i class="fas fa-check"></i> Dedicated account manager</li>
+            </ul>
+            <a href="#contact" class="pr-btn">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BLOG SECTION ===== -->
+    <section id="blog" class="blog-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Latest Insights</span>
+          <h2 class="section-title">Tech <span class="gradient-text">Insights & News</span></h2>
+          <p class="section-desc">Stay ahead of the curve with our latest articles on technology trends, best practices, and industry insights.</p>
+        </div>
+        <div class="blog-grid">
+          <div class="blog-card blog-featured" data-aos="fade-right">
+            <div class="bc-img bc-img-1">
+              <span class="bc-cat">Artificial Intelligence</span>
+            </div>
+            <div class="bc-body">
+              <div class="bc-meta">
+                <span><i class="fas fa-calendar-alt"></i> March 1, 2026</span>
+                <span><i class="fas fa-clock"></i> 8 min read</span>
+              </div>
+              <h3>The Future of AI in Business: Top 10 Trends Shaping 2026 and Beyond</h3>
+              <p>Artificial Intelligence is no longer a buzzword — it's the backbone of modern business. From generative AI to autonomous agents, discover how AI is revolutionizing every industry.</p>
+              <a href="#blog" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="bc-img bc-img-2">
+              <span class="bc-cat">Cloud Computing</span>
+            </div>
+            <div class="bc-body">
+              <div class="bc-meta">
+                <span><i class="fas fa-calendar-alt"></i> February 20, 2026</span>
+                <span><i class="fas fa-clock"></i> 6 min read</span>
+              </div>
+              <h3>Why Cloud Migration is Essential for Business Growth in 2026</h3>
+              <p>Companies still running on-premise are leaving money on the table. Here's why cloud migration is no longer optional.</p>
+              <a href="#blog" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="bc-img bc-img-3">
+              <span class="bc-cat">Web Development</span>
+            </div>
+            <div class="bc-body">
+              <div class="bc-meta">
+                <span><i class="fas fa-calendar-alt"></i> February 10, 2026</span>
+                <span><i class="fas fa-clock"></i> 5 min read</span>
+              </div>
+              <h3>Top 10 Web Development Trends You Must Know in 2026</h3>
+              <p>From Edge computing to WebAssembly, these web development trends are reshaping how we build for the internet.</p>
+              <a href="#blog" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-grid">
+          <div class="faq-left" data-aos="fade-right">
+            <span class="section-tag">FAQ</span>
+            <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            <p>Have more questions? We're here to help.</p>
+            <a href="#contact" class="btn-primary-lg">Contact Us <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="faq-right" data-aos="fade-left">
+            <div class="faq-item">
+              <button class="faq-q">How long does it take to build a website? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-a"><p>Timeline varies based on complexity. A simple website takes 2–4 weeks, while complex web applications take 2–6 months. We provide a detailed timeline during our consultation call.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">Do you work with international clients? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-a"><p>Absolutely! We serve clients in 30+ countries worldwide. Our team works across time zones and communicates fluently in English, Hindi, and other languages.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">What technologies do you specialise in? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-a"><p>We work with 100+ technologies including React, Node.js, Flutter, Python, AWS, Azure, TensorFlow, and many more. We recommend the best tech stack based on your specific needs.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">How do you ensure project quality? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-a"><p>Every project goes through rigorous QA testing including performance, security, usability, and cross-browser compatibility testing. We follow ISO-certified processes and agile methodology.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">Do you provide post-launch support? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-a"><p>Yes! All plans include free post-launch support (3–12 months depending on plan). We also offer annual maintenance contracts for ongoing support, updates, and security patches.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">How do you handle project pricing? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-a"><p>We offer both fixed-price and time-and-material pricing models. After understanding your requirements, we provide a detailed, transparent quotation with no hidden charges.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="cta-banner">
+      <div class="cta-bg" aria-hidden="true"></div>
+      <div class="container cta-content" data-aos="zoom-in">
+        <h2>Ready to Transform Your Business?</h2>
+        <p>Join 300+ global companies that trust BS SOFTTECH SOLUTION to power their digital future. Get a free consultation and custom quote today.</p>
+        <div class="cta-btns">
+          <a href="#contact" class="btn-white">Get Free Quote <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+919876543210" class="btn-outline-white"><i class="fas fa-phone"></i> Call Now</a>
+        </div>
+        <div class="cta-trust">
+          <span><i class="fas fa-check-circle"></i> Free Consultation</span>
+          <span><i class="fas fa-check-circle"></i> No Hidden Charges</span>
+          <span><i class="fas fa-check-circle"></i> 100% Satisfaction Guarantee</span>
+          <span><i class="fas fa-check-circle"></i> On-Time Delivery</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Amazing Together</span></h2>
+          <p class="section-desc">Tell us about your project and we'll get back to you with a free, no-obligation quote within 24 hours.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="ci-card">
+              <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4>Our Office</h4>
+                <p>123 Tech Park, Digital Hub<br/>India – 110001</p>
+              </div>
+            </div>
+            <div class="ci-card">
+              <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+              <div>
+                <h4>Call Us</h4>
+                <a href="tel:+919876543210">+91 987 654 3210</a>
+                <a href="tel:+919876543211">+91 987 654 3211</a>
+              </div>
+            </div>
+            <div class="ci-card">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email Us</h4>
+                <a href="mailto:info@bssofttech.com">info@bssofttech.com</a>
+                <a href="mailto:support@bssofttech.com">support@bssofttech.com</a>
+              </div>
+            </div>
+            <div class="ci-card">
+              <div class="ci-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <h4>Business Hours</h4>
+                <p>Monday – Saturday<br/>9:00 AM – 7:00 PM (IST)</p>
+              </div>
+            </div>
+            <div class="contact-social">
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm" data-aos="fade-left" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Full Name *</label>
+                <input type="text" id="fname" name="name" placeholder="Your full name" required autocomplete="name" />
+                <span class="form-error" id="nameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="femail">Email Address *</label>
+                <input type="email" id="femail" name="email" placeholder="your@email.com" required autocomplete="email" />
+                <span class="form-error" id="emailError"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fphone">Phone Number</label>
+                <input type="tel" id="fphone" name="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel" />
+              </div>
+              <div class="form-group">
+                <label for="fservice">Service Required</label>
+                <select id="fservice" name="service">
+                  <option value="">Select a service...</option>
+                  <option>Web Development</option>
+                  <option>Mobile App Development</option>
+                  <option>Cloud Solutions</option>
+                  <option>AI / Machine Learning</option>
+                  <option>Digital Marketing & SEO</option>
+                  <option>UI/UX Design</option>
+                  <option>Cybersecurity</option>
+                  <option>ERP / CRM</option>
+                  <option>Blockchain / Web3</option>
+                  <option>IT Consulting</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fbudget">Project Budget</label>
+              <select id="fbudget" name="budget">
+                <option value="">Select budget range...</option>
+                <option>Under $1,000</option>
+                <option>$1,000 – $5,000</option>
+                <option>$5,000 – $15,000</option>
+                <option>$15,000 – $50,000</option>
+                <option>$50,000+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Project Details *</label>
+              <textarea id="fmessage" name="message" rows="5" placeholder="Tell us about your project, goals, and requirements..." required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <span class="btn-text">Send Message <i class="fas fa-paper-plane"></i></span>
+              <span class="btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+            </button>
+            <div class="form-success" id="formSuccess" style="display:none;">
+              <i class="fas fa-check-circle"></i>
+              <p>Thank you! Your message has been sent. We'll get back to you within 24 hours.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="#home" class="footer-logo">
+            <span class="logo-hex">&#9109;</span>
+            <div class="logo-text-wrap">
+              <span class="logo-primary">BS <em>SOFTTECH</em></span>
+              <span class="logo-sub">SOLUTION</span>
+            </div>
+          </a>
+          <p>Your trusted global IT partner — delivering cutting-edge technology solutions that transform businesses and drive sustainable growth worldwide.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="footer-badges">
+            <span><i class="fab fa-aws"></i> AWS Partner</span>
+            <span><i class="fab fa-google"></i> Google Partner</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Mobile App Development</a></li>
+            <li><a href="#services">Cloud Solutions</a></li>
+            <li><a href="#services">AI & Machine Learning</a></li>
+            <li><a href="#services">Digital Marketing & SEO</a></li>
+            <li><a href="#services">UI/UX Design</a></li>
+            <li><a href="#services">Cybersecurity</a></li>
+            <li><a href="#services">Blockchain & Web3</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#blog">Blog & Insights</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">Careers <span class="footer-badge-new">Hiring!</span></a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>123 Tech Park, Digital Hub, India – 110001</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+919876543210">+91 987 654 3210</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@bssofttech.com">info@bssofttech.com</a>
+          </div>
+          <div class="footer-newsletter">
+            <h5>Subscribe to Newsletter</h5>
+            <form class="nl-form" onsubmit="return false;">
+              <input type="email" placeholder="Enter your email" aria-label="Newsletter email" />
+              <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 <strong>BS SOFTTECH SOLUTION</strong>. All rights reserved. | Delivering Technology Excellence Worldwide.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING ELEMENTS ===== -->
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Chat with us!</span>
+  </a>
+
+  <!-- Cookie Notice -->
+  <div class="cookie-notice" id="cookieNotice">
+    <div class="cn-content">
+      <i class="fas fa-cookie-bite"></i>
+      <p>We use cookies to enhance your experience. By continuing, you agree to our <a href="#">Cookie Policy</a>.</p>
+    </div>
+    <div class="cn-btns">
+      <button class="cn-accept" id="cookieAccept">Accept All</button>
+      <button class="cn-decline" id="cookieDecline">Decline</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
