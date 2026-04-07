@@ -761,7 +761,7 @@ window.addEventListener('load', () => {
   ].join(';');
 
   console.log('%c⬡ BS SOFTTECH SOLUTION', styles);
-  console.log('%cGlobal IT Services | bssofttech.com', 'color: #00CFFF; font-size: 12px;');
+  console.log('%cGlobal IT Services | bssofttechsoluton.me', 'color: #00CFFF; font-size: 12px;');
 })();
 
 /* ============================================================
@@ -856,7 +856,7 @@ window.addEventListener('load', () => {
         <p>Or describe your issue here and we'll guide you!</p>`;
     } else if (lower.includes('partner') || lower.includes('collaboration')) {
       response = `<p>We're always open to strategic partnerships! &#129309;</p>
-        <p>Email us at: partnerships@bssofttech.com</p>
+        <p>Email us at: partnerships@bssofttechsoluton.me</p>
         <p>Or schedule a call through our <a href="#contact" onclick="closeChat()">contact page</a>.</p>`;
     } else if (lower.includes('hello') || lower.includes('hi') || lower.includes('hey')) {
       response = `<p>Hello there! &#128075; Great to hear from you!</p>
@@ -1440,3 +1440,4 @@ console.log('%c\u2709 Contact: bssofttechsolution@gmail.com', 'color: #7A9ABF; f
 
   titles.forEach(t => titleObs.observe(t));
 })();
+

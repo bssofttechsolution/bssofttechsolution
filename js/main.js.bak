@@ -723,5 +723,6 @@ window.addEventListener('load', () => {
   ].join(';');
 
   console.log('%c⬡ BS SOFTTECH SOLUTION', styles);
-  console.log('%cGlobal IT Services | bssofttech.com', 'color: #00CFFF; font-size: 12px;');
+  console.log('%cGlobal IT Services | bssofttechsoluton.me', 'color: #00CFFF; font-size: 12px;');
 })();
+

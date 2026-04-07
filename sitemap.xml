@@ -7,12 +7,12 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://www.bssofttech.com/</loc>
+    <loc>https://www.bssofttechsoluton.me/</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.bssofttech.com/public/BSSLOGO.jpeg</image:loc>
+      <image:loc>https://www.bssofttechsoluton.me/public/BSSLOGO.jpeg</image:loc>
       <image:title>BS SOFTTECH SOLUTION - Global IT Services Company</image:title>
       <image:caption>BS SOFTTECH SOLUTION official logo - Leading global IT services and software development company</image:caption>
     </image:image>
@@ -20,7 +20,7 @@
 
   <!-- Services Section -->
   <url>
-    <loc>https://www.bssofttech.com/#services</loc>
+    <loc>https://www.bssofttechsoluton.me/#services</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
@@ -28,84 +28,84 @@
 
   <!-- Individual Service Pages for SEO -->
   <url>
-    <loc>https://www.bssofttech.com/#web-development</loc>
+    <loc>https://www.bssofttechsoluton.me/#web-development</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://www.bssofttech.com/#mobile-app-development</loc>
+    <loc>https://www.bssofttechsoluton.me/#mobile-app-development</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://www.bssofttech.com/#cloud-solutions</loc>
+    <loc>https://www.bssofttechsoluton.me/#cloud-solutions</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://www.bssofttech.com/#ai-machine-learning</loc>
+    <loc>https://www.bssofttechsoluton.me/#ai-machine-learning</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://www.bssofttech.com/#digital-marketing-seo</loc>
+    <loc>https://www.bssofttechsoluton.me/#digital-marketing-seo</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://www.bssofttech.com/#cybersecurity</loc>
+    <loc>https://www.bssofttechsoluton.me/#cybersecurity</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://www.bssofttech.com/#blockchain-web3</loc>
+    <loc>https://www.bssofttechsoluton.me/#blockchain-web3</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://www.bssofttech.com/#ui-ux-design</loc>
+    <loc>https://www.bssofttechsoluton.me/#ui-ux-design</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://www.bssofttech.com/#iot-solutions</loc>
+    <loc>https://www.bssofttechsoluton.me/#iot-solutions</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://www.bssofttech.com/#devops-consulting</loc>
+    <loc>https://www.bssofttechsoluton.me/#devops-consulting</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://www.bssofttech.com/#erp-crm</loc>
+    <loc>https://www.bssofttechsoluton.me/#erp-crm</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://www.bssofttech.com/#data-analytics</loc>
+    <loc>https://www.bssofttechsoluton.me/#data-analytics</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
@@ -113,7 +113,7 @@
 
   <!-- About Section -->
   <url>
-    <loc>https://www.bssofttech.com/#about</loc>
+    <loc>https://www.bssofttechsoluton.me/#about</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -121,7 +121,7 @@
 
   <!-- Portfolio Section -->
   <url>
-    <loc>https://www.bssofttech.com/#portfolio</loc>
+    <loc>https://www.bssofttechsoluton.me/#portfolio</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -129,7 +129,7 @@
 
   <!-- Pricing Section -->
   <url>
-    <loc>https://www.bssofttech.com/#pricing</loc>
+    <loc>https://www.bssofttechsoluton.me/#pricing</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -137,7 +137,7 @@
 
   <!-- Blog Section -->
   <url>
-    <loc>https://www.bssofttech.com/#blog</loc>
+    <loc>https://www.bssofttechsoluton.me/#blog</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -145,7 +145,7 @@
 
   <!-- FAQ Section -->
   <url>
-    <loc>https://www.bssofttech.com/#faq</loc>
+    <loc>https://www.bssofttechsoluton.me/#faq</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -153,7 +153,7 @@
 
   <!-- Contact Section -->
   <url>
-    <loc>https://www.bssofttech.com/#contact</loc>
+    <loc>https://www.bssofttechsoluton.me/#contact</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -161,7 +161,7 @@
 
   <!-- Technologies Section -->
   <url>
-    <loc>https://www.bssofttech.com/#technologies</loc>
+    <loc>https://www.bssofttechsoluton.me/#technologies</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -169,7 +169,7 @@
 
   <!-- Why Choose Us Section -->
   <url>
-    <loc>https://www.bssofttech.com/#why-us</loc>
+    <loc>https://www.bssofttechsoluton.me/#why-us</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -177,7 +177,7 @@
 
   <!-- Process Section -->
   <url>
-    <loc>https://www.bssofttech.com/#process</loc>
+    <loc>https://www.bssofttechsoluton.me/#process</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -185,7 +185,7 @@
 
   <!-- Testimonials Section -->
   <url>
-    <loc>https://www.bssofttech.com/#testimonials</loc>
+    <loc>https://www.bssofttechsoluton.me/#testimonials</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -193,7 +193,7 @@
 
   <!-- Privacy Policy Page -->
   <url>
-    <loc>https://www.bssofttech.com/privacy-policy.html</loc>
+    <loc>https://www.bssofttechsoluton.me/privacy-policy.html</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
@@ -201,7 +201,7 @@
 
   <!-- Terms of Service Page -->
   <url>
-    <loc>https://www.bssofttech.com/terms-of-service.html</loc>
+    <loc>https://www.bssofttechsoluton.me/terms-of-service.html</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
@@ -209,7 +209,7 @@
 
   <!-- Cookie Policy Page -->
   <url>
-    <loc>https://www.bssofttech.com/cookie-policy.html</loc>
+    <loc>https://www.bssofttechsoluton.me/cookie-policy.html</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
@@ -217,10 +217,11 @@
 
   <!-- Careers Page -->
   <url>
-    <loc>https://www.bssofttech.com/careers.html</loc>
+    <loc>https://www.bssofttechsoluton.me/careers.html</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
 </urlset>
+
