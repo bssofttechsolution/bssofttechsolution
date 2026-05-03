@@ -5594,8 +5594,8 @@ section:not(:first-of-type) {
    ============================================================ */
 .whatsapp-float {
   position: fixed;
-  bottom: 30px;
-  left: 24px;
+  bottom: 95px;
+  right: 24px;
   z-index: 9990;
   width: 60px;
   height: 60px;
@@ -5633,7 +5633,7 @@ section:not(:first-of-type) {
 /* Tooltip */
 .wa-tooltip {
   position: absolute;
-  left: 72px;
+  right: 72px;
   background: rgba(9, 22, 40, 0.95);
   color: #fff;
   padding: 8px 16px;
@@ -5643,7 +5643,7 @@ section:not(:first-of-type) {
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(-8px);
+  transform: translateX(8px);
   transition: all 0.3s ease;
   pointer-events: none;
   border: 1px solid rgba(37, 211, 102, 0.3);
@@ -5653,12 +5653,12 @@ section:not(:first-of-type) {
 .wa-tooltip::after {
   content: '';
   position: absolute;
-  left: -6px;
+  right: -6px;
   top: 50%;
   transform: translateY(-50%);
   border-width: 6px;
   border-style: solid;
-  border-color: transparent rgba(9, 22, 40, 0.95) transparent transparent;
+  border-color: transparent transparent transparent rgba(9, 22, 40, 0.95);
 }
 
 .whatsapp-float:hover .wa-tooltip {
@@ -5683,8 +5683,8 @@ section:not(:first-of-type) {
     width: 52px;
     height: 52px;
     font-size: 26px;
-    bottom: 30px;
-    left: 16px;
+    bottom: 85px;
+    right: 16px;
   }
   .wa-tooltip { display: none; }
 }
