@@ -2,95 +2,46 @@
 # BS SOFTTECH SOLUTION — Robots.txt
 # Website: https://www.bssofttechsoluton.me
 # Global IT Services & Software Development Company
+# Serving: India, UAE, Saudi Arabia, Qatar, Kuwait, UK, Germany
 # ============================================================
 
-# Allow all search engine crawlers
+# Allow all legitimate search engine crawlers
 User-agent: *
 Allow: /
 Allow: /css/
 Allow: /js/
-Allow: /images/
-Allow: /assets/
 Allow: /public/
-
-# Crawl delay to be respectful to server
 Crawl-delay: 1
 
-# Disallow admin and private directories (if created in future)
+# Disallow admin and private directories
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
-Disallow: /*.bak$
 Disallow: /backup/
 Disallow: /node_modules/
 Disallow: /.git/
-
-# Sitemap location
-Sitemap: https://www.bssofttechsoluton.me/sitemap.xml
+Disallow: /.env*
+Disallow: /*.bak$
 
 # ============================================================
-# Specific Bot Rules
+# Major Search Engines — Priority Rules
 # ============================================================
 
-# Google
+# Google (primary target)
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
 
-# Google Image Bot
 User-agent: Googlebot-Image
+Allow: /
 Allow: /public/
 Allow: /images/
 Allow: /assets/
 
-# Google AdsBot
 User-agent: AdsBot-Google
 Allow: /
 
-# Bing
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-# Baidu (China)
-User-agent: Baiduspider
-Allow: /
-Crawl-delay: 2
-
-# Yandex (Russia)
-User-agent: Yandex
-Allow: /
-Crawl-delay: 2
-
-# DuckDuckGo
-User-agent: DuckDuckBot
-Allow: /
-
-# Facebook
-User-agent: facebookexternalhit
-Allow: /
-
-# Twitter
-User-agent: Twitterbot
-Allow: /
-
-# LinkedIn
-User-agent: LinkedInBot
-Allow: /
-
-# Block AI training crawlers (protect content)
-User-agent: GPTBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-Crawl-delay: 0
-
-User-agent: Googlebot-Image
-Allow: /images/
+User-agent: Mediapartners-Google
 Allow: /
 
 # Bing
@@ -107,25 +58,55 @@ Crawl-delay: 2
 User-agent: DuckDuckBot
 Allow: /
 
-# Facebook
+# Baidu (China market)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Yandex (Russia & CIS markets)
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 3
+
+# ============================================================
+# Social Media Crawlers — Allow for rich previews
+# ============================================================
+
 User-agent: facebookexternalhit
 Allow: /
 
-# Twitter
 User-agent: Twitterbot
 Allow: /
 
-# LinkedIn
 User-agent: LinkedInBot
 Allow: /
 
-# Pinterest
 User-agent: Pinterest
 Allow: /
 
+User-agent: WhatsApp
+Allow: /
+
 # ============================================================
-# Block Bad Bots (Common scrapers and spam bots)
+# Block AI Training Crawlers (protect content)
 # ============================================================
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+# ============================================================
+# Block Known Scraper/Spam Bots
+# ============================================================
+
 User-agent: AhrefsBot
 Disallow: /
 
@@ -144,11 +125,8 @@ Disallow: /
 User-agent: Sogou
 Disallow: /
 
-User-agent: YandexBot
-Crawl-delay: 5
-
 # ============================================================
-# Host directive
+# Sitemap & Host
 # ============================================================
+Sitemap: https://www.bssofttechsoluton.me/sitemap.xml
 Host: https://www.bssofttechsoluton.me
-

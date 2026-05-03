@@ -2,43 +2,54 @@
   "version": 2,
   "name": "bssofttechsolution",
   "builds": [
+    { "src": "**/*.html", "use": "@vercel/static" },
+    { "src": "**/*.css", "use": "@vercel/static" },
+    { "src": "**/*.js", "use": "@vercel/static" },
+    { "src": "public/**", "use": "@vercel/static" },
+    { "src": "robots.txt", "use": "@vercel/static" },
+    { "src": "sitemap.xml", "use": "@vercel/static" },
+    { "src": "manifest.json", "use": "@vercel/static" },
+    { "src": "sw.js", "use": "@vercel/static" }
+  ],
+  "headers": [
     {
-      "src": "**/*.html",
-      "use": "@vercel/static"
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(self)" },
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' fonts.googleapis.com cdnjs.cloudflare.com cdn.jsdelivr.net; font-src fonts.gstatic.com cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self' https:; frame-src 'self' https://www.youtube.com https://www.google.com;" }
+      ]
     },
     {
-      "src": "**/*.css",
-      "use": "@vercel/static"
+      "source": "/public/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
     },
     {
-      "src": "**/*.js",
-      "use": "@vercel/static"
+      "source": "/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
+      ]
     },
     {
-      "src": "public/**",
-      "use": "@vercel/static"
+      "source": "/js/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
+      ]
     },
     {
-      "src": "robots.txt",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "sitemap.xml",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "manifest.json",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "sw.js",
-      "use": "@vercel/static"
+      "source": "/(.*).html",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }
+      ]
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }
