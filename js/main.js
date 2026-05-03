@@ -626,12 +626,14 @@ window.addEventListener('load', () => {
     if (btnLoading) btnLoading.style.display = 'inline-flex';
     submitBtn.disabled = true;
 
-    // Submit to Google Forms via Fetch API
+    // Submit to Google Forms via Fetch API using URLSearchParams (application/x-www-form-urlencoded)
     const formData = new FormData(form);
+    const urlParams = new URLSearchParams(formData);
+    
     fetch(form.action, {
       method: 'POST',
       mode: 'no-cors',
-      body: formData
+      body: urlParams
     })
     .then(() => {
       // Re-enable button
