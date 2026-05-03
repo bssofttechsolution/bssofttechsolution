@@ -339,8 +339,12 @@ window.addEventListener('load', () => {
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
       tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
 
       const filter = tab.getAttribute('data-filter');
       cards.forEach(card => {
@@ -393,11 +397,21 @@ window.addEventListener('load', () => {
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => c.classList.remove('active'));
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      contents.forEach(c => {
+        c.classList.remove('active');
+        c.hidden = true;
+      });
       tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
       const target = document.getElementById(`tab-${tab.getAttribute('data-tab')}`);
-      if (target) target.classList.add('active');
+      if (target) {
+        target.classList.add('active');
+        target.hidden = false;
+      }
     });
   });
 })();
@@ -412,42 +426,25 @@ window.addEventListener('load', () => {
   items.forEach(item => {
     const btn = item.querySelector('.faq-q');
     if (!btn) return;
+    
+    // Initial ARIA state
+    btn.setAttribute('aria-expanded', item.classList.contains('active') ? 'true' : 'false');
+    
     btn.addEventListener('click', () => {
       const isOpen = item.classList.contains('active');
-      items.forEach(i => i.classList.remove('active'));
-      if (!isOpen) item.classList.add('active');
+      items.forEach(i => {
+        i.classList.remove('active');
+        const iBtn = i.querySelector('.faq-q');
+        if (iBtn) iBtn.setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      }
     });
   });
 })();
 
-/* ============================================================
-   PRICING TOGGLE
-   ============================================================ */
-(function initPricingToggle() {
-  const toggle    = document.getElementById('ptSwitch');
-  const monthLabel = document.getElementById('pt-monthly');
-  const yearLabel  = document.getElementById('pt-yearly');
-  const amounts    = document.querySelectorAll('.pr-amount[data-monthly]');
-  const savings    = document.querySelectorAll('.pr-savings');
-  if (!toggle) return;
-
-  let isYearly = false;
-
-  toggle.addEventListener('click', () => {
-    isYearly = !isYearly;
-    toggle.classList.toggle('yearly', isYearly);
-    monthLabel.classList.toggle('active', !isYearly);
-    yearLabel.classList.toggle('active', isYearly);
-    amounts.forEach(el => {
-      el.textContent = isYearly
-        ? el.getAttribute('data-yearly')
-        : el.getAttribute('data-monthly');
-    });
-    savings.forEach(el => {
-      el.style.display = isYearly ? 'inline-block' : 'none';
-    });
-  });
-})();
 
 /* ============================================================
    TESTIMONIAL SWIPER
@@ -764,136 +761,6 @@ window.addEventListener('load', () => {
   console.log('%cGlobal IT Services | bssofttechsoluton.me', 'color: #00CFFF; font-size: 12px;');
 })();
 
-/* ============================================================
-   LIVE CHAT WIDGET
-   ============================================================ */
-(function initLiveChat() {
-  const chatToggle = document.getElementById('chatToggle');
-  const chatWindow = document.getElementById('chatWindow');
-  const chatMinimize = document.getElementById('chatMinimize');
-  const chatInputForm = document.getElementById('chatInputForm');
-  const chatInput = document.getElementById('chatInput');
-  const chatBody = document.getElementById('chatBody');
-  const quickBtns = document.querySelectorAll('.quick-btn');
-
-  if (!chatToggle || !chatWindow) return;
-
-  // Toggle chat window
-  chatToggle.addEventListener('click', () => {
-    chatToggle.classList.toggle('active');
-    chatWindow.classList.toggle('active');
-    if (chatWindow.classList.contains('active')) {
-      setTimeout(() => chatInput?.focus(), 350);
-    }
-  });
-
-  // Minimize chat
-  chatMinimize?.addEventListener('click', () => {
-    chatToggle.classList.remove('active');
-    chatWindow.classList.remove('active');
-  });
-
-  // Quick action buttons
-  quickBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const msg = btn.dataset.msg;
-      if (msg) {
-        addUserMessage(msg);
-        setTimeout(() => getBotResponse(msg), 800);
-      }
-    });
-  });
-
-  // Form submit
-  chatInputForm?.addEventListener('submit', e => {
-    e.preventDefault();
-    const msg = chatInput.value.trim();
-    if (!msg) return;
-    addUserMessage(msg);
-    chatInput.value = '';
-    setTimeout(() => getBotResponse(msg), 800);
-  });
-
-  function addUserMessage(text) {
-    const msgDiv = document.createElement('div');
-    msgDiv.className = 'chat-message user';
-    msgDiv.innerHTML = `
-      <div class="msg-content"><p>${escapeHtml(text)}</p></div>
-      <span class="msg-time">${getCurrentTime()}</span>
-    `;
-    chatBody.appendChild(msgDiv);
-    scrollToBottom();
-    // Hide quick actions after first message
-    const quickActions = document.querySelector('.chat-quick-actions');
-    if (quickActions) quickActions.style.display = 'none';
-  }
-
-  function addBotMessage(html) {
-    const msgDiv = document.createElement('div');
-    msgDiv.className = 'chat-message bot';
-    msgDiv.innerHTML = `
-      <div class="msg-content">${html}</div>
-      <span class="msg-time">${getCurrentTime()}</span>
-    `;
-    chatBody.appendChild(msgDiv);
-    scrollToBottom();
-  }
-
-  function getBotResponse(userMsg) {
-    const lower = userMsg.toLowerCase();
-    let response = '';
-
-    if (lower.includes('quote') || lower.includes('price') || lower.includes('cost')) {
-      response = `<p>We'd love to provide you a customized quote!</p>
-        <p>Please fill out our <a href="#contact" onclick="closeChat()">contact form</a> with your project details, and our team will get back to you within 24 hours with a detailed proposal.</p>`;
-    } else if (lower.includes('service')) {
-      response = `<p>We offer a comprehensive range of IT services:</p>
-        <p>&#10148; Web & App Development<br>&#10148; Cloud Solutions & DevOps<br>&#10148; AI & Machine Learning<br>&#10148; Cybersecurity<br>&#10148; Digital Marketing<br>&#10148; IT Consulting & more!</p>
-        <p>Check our <a href="#services" onclick="closeChat()">services section</a> for details.</p>`;
-    } else if (lower.includes('support') || lower.includes('help')) {
-      response = `<p>Our support team is here to help! &#128588;</p>
-        <p>For immediate assistance:<br>&#9993; Email: bssofttechsolution@gmail.com<br>&#9742; Phone: +91 620 481 1752</p>
-        <p>Or describe your issue here and we'll guide you!</p>`;
-    } else if (lower.includes('partner') || lower.includes('collaboration')) {
-      response = `<p>We're always open to strategic partnerships! &#129309;</p>
-        <p>Email us at: partnerships@bssofttechsoluton.me</p>
-        <p>Or schedule a call through our <a href="#contact" onclick="closeChat()">contact page</a>.</p>`;
-    } else if (lower.includes('hello') || lower.includes('hi') || lower.includes('hey')) {
-      response = `<p>Hello there! &#128075; Great to hear from you!</p>
-        <p>How can we assist you today? Feel free to ask about our services, pricing, or anything else!</p>`;
-    } else if (lower.includes('location') || lower.includes('office') || lower.includes('address')) {
-      response = `<p>&#128205; <strong>BS SOFTTECH SOLUTION</strong></p>
-        <p>Pailanhat, Joka, Kolkata, West Bengal, India – 700104<br>We serve clients globally!</p>
-        <p>&#9993; bssofttechsolution@gmail.com</p>`;
-    } else {
-      response = `<p>Thanks for your message! &#128522;</p>
-        <p>Our team will review your inquiry and respond shortly. For faster assistance, you can also:</p>
-        <p>&#9993; Email: bssofttechsolution@gmail.com<br>&#9742; Call: +91 620 481 1752</p>`;
-    }
-
-    addBotMessage(response);
-  }
-
-  function scrollToBottom() {
-    chatBody.scrollTop = chatBody.scrollHeight;
-  }
-
-  function getCurrentTime() {
-    return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  }
-
-  function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-  }
-
-  // Global function to close chat
-  window.closeChat = function() {
-    chatToggle.classList.remove('active');
-    chatWindow.classList.remove('active');
-  };
-})();
 
 /* ============================================================
    PORTFOLIO LIGHTBOX

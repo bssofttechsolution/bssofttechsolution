@@ -5247,3 +5247,445 @@ section:not(:first-of-type) {
   .lb-prev { left: 10px; }
   .lb-next { right: 10px; }
 }
+
+/* ============================================================
+   PREMIUM UI/UX ENHANCEMENTS (ADDED)
+   ============================================================ */
+
+/* Glassmorphism & Premium Hover for Cards */
+.service-card, .portfolio-card, .stat-card, .pricing-card {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease !important;
+}
+
+.service-card:hover, .portfolio-card:hover, .stat-card:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+  box-shadow: 0 20px 40px rgba(2, 97, 244, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1) inset !important;
+  background: linear-gradient(145deg, rgba(20, 24, 34, 0.95) 0%, rgba(10, 12, 16, 0.95) 100%) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-color: rgba(2, 97, 244, 0.3) !important;
+}
+
+/* Button Glow Effects */
+.btn-primary-lg, .pr-btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease !important;
+  box-shadow: 0 4px 15px rgba(2, 97, 244, 0.4) !important;
+}
+
+.btn-primary-lg:hover, .pr-btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(2, 97, 244, 0.6), 0 0 20px rgba(0, 207, 255, 0.4) !important;
+}
+
+.btn-primary-lg::after, .pr-btn-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.btn-primary-lg:hover::after, .pr-btn-primary:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Nav Link Hover Underline Animation */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #0261F4, #00CFFF);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+
+/* ============================================================
+   GEO SEO SECTION — India, Gulf & Europe Targeting
+   ============================================================ */
+.geo-seo-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, var(--bg-base) 0%, var(--bg-dark) 50%, var(--bg-base) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.geo-seo-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(2,97,244,0.3), rgba(0,207,255,0.2), rgba(2,97,244,0.3), transparent);
+}
+
+.geo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.geo-card {
+  background: linear-gradient(135deg, rgba(9,22,40,0.9), rgba(6,16,30,0.95));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  transition: var(--transition-med);
+  position: relative;
+  overflow: hidden;
+}
+
+.geo-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(2,97,244,0.3), rgba(0,207,255,0.15), rgba(124,58,237,0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.geo-card:hover::before {
+  opacity: 1;
+}
+
+.geo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(2,97,244,0.15), 0 0 60px rgba(0,207,255,0.05);
+  border-color: rgba(2,97,244,0.2);
+}
+
+.geo-flag {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  line-height: 1;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+}
+
+.geo-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.geo-card > p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.geo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.geo-tags span {
+  background: linear-gradient(135deg, rgba(2,97,244,0.12), rgba(0,207,255,0.06));
+  color: var(--secondary);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border: 1px solid rgba(0,207,255,0.15);
+  transition: var(--transition-fast);
+}
+
+.geo-card:hover .geo-tags span {
+  border-color: rgba(0,207,255,0.3);
+  background: linear-gradient(135deg, rgba(2,97,244,0.2), rgba(0,207,255,0.1));
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .geo-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .geo-grid { grid-template-columns: 1fr; }
+  .geo-seo-section { padding: 60px 0; }
+}
+
+/* ============================================================
+   ENHANCED SECTION ANIMATIONS
+   ============================================================ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+[data-aos] {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(30px);
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(-30px);
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(30px);
+}
+
+[data-aos="zoom-in"] {
+  transform: scale(0.9);
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* ============================================================
+   PREMIUM GLASSMORPHISM ENHANCEMENTS
+   ============================================================ */
+.service-card,
+.industry-card,
+.award-card,
+.pricing-card,
+.blog-card,
+.testi-card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Enhanced service card glow on hover */
+.service-card:hover {
+  box-shadow: 0 20px 60px rgba(2,97,244,0.12), 0 0 100px rgba(0,207,255,0.04);
+}
+
+/* Enhanced stat card pulse */
+.stat-card:hover .stat-icon {
+  animation: statPulse 0.6s ease;
+}
+
+@keyframes statPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Industry card enhanced hover */
+.industry-card:hover {
+  border-color: rgba(0,207,255,0.3);
+  box-shadow: 0 12px 40px rgba(2,97,244,0.15);
+}
+
+.industry-card:hover .ind-icon {
+  transform: scale(1.1) rotate(-5deg);
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+/* Blog card enhanced hover */
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.blog-card:hover .bc-img img {
+  transform: scale(1.08);
+}
+
+/* Pricing card premium glow */
+.pricing-popular {
+  box-shadow: 0 0 80px rgba(2,97,244,0.15), 0 20px 60px rgba(0,0,0,0.3);
+}
+
+/* Why section cards floating animation */
+.wstack-card {
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+.wsc-1 { animation-delay: 0s; }
+.wsc-2 { animation-delay: 0.5s; }
+.wsc-3 { animation-delay: 1s; }
+.wsc-4 { animation-delay: 1.5s; }
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Timeline enhanced dots */
+.tl-current {
+  box-shadow: 0 0 20px rgba(2,97,244,0.5), 0 0 40px rgba(0,207,255,0.2);
+  animation: currentPulse 2s ease-in-out infinite;
+}
+
+@keyframes currentPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(2,97,244,0.5), 0 0 40px rgba(0,207,255,0.2); }
+  50% { box-shadow: 0 0 30px rgba(2,97,244,0.7), 0 0 60px rgba(0,207,255,0.3); }
+}
+
+/* Enhanced scroll indicator */
+.scroll-indicator {
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.6; }
+}
+
+/* Cookie notice enhanced */
+.cookie-notice.show {
+  animation: slideUpNotice 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+
+@keyframes slideUpNotice {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* WhatsApp float enhanced pulse */
+.whatsapp-float {
+  animation: waPulse 3s ease-in-out infinite;
+}
+
+@keyframes waPulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.3); }
+  50% { box-shadow: 0 4px 30px rgba(37,211,102,0.5), 0 0 60px rgba(37,211,102,0.15); }
+}
+
+/* Page progress bar gradient */
+.page-progress {
+  background: linear-gradient(90deg, #0261F4, #00CFFF, #7C3AED, #00CFFF) !important;
+  background-size: 300% 100% !important;
+  animation: progressGradient 3s ease infinite !important;
+}
+
+@keyframes progressGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================================================
+   WHATSAPP FLOATING BUTTON
+   ============================================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  left: 24px;
+  z-index: 9990;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 4px 24px rgba(37, 211, 102, 0.4),
+              0 0 0 0 rgba(37, 211, 102, 0.5);
+  animation: waFloat 3s ease-in-out infinite, waPulse 2s ease infinite;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.12) translateY(-4px);
+  box-shadow: 0 8px 36px rgba(37, 211, 102, 0.6),
+              0 0 0 8px rgba(37, 211, 102, 0.15);
+  color: #fff;
+  animation: none;
+}
+
+.whatsapp-float:active {
+  transform: scale(0.95);
+}
+
+.whatsapp-float i {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Tooltip */
+.wa-tooltip {
+  position: absolute;
+  left: 72px;
+  background: rgba(9, 22, 40, 0.95);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.wa-tooltip::after {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent rgba(9, 22, 40, 0.95) transparent transparent;
+}
+
+.whatsapp-float:hover .wa-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+@keyframes waFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes waPulse {
+  0% { box-shadow: 0 4px 24px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70% { box-shadow: 0 4px 24px rgba(37, 211, 102, 0.4), 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 4px 24px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    font-size: 26px;
+    bottom: 30px;
+    left: 16px;
+  }
+  .wa-tooltip { display: none; }
+}
+
