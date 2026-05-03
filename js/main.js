@@ -626,17 +626,24 @@ window.addEventListener('load', () => {
     if (btnLoading) btnLoading.style.display = 'inline-flex';
     submitBtn.disabled = true;
 
-    // Submit to Google Forms via hidden iframe
-    window.submitted = true;
-    HTMLFormElement.prototype.submit.call(form);
-
-    // Wait a brief moment to allow iframe to process the response
-    setTimeout(() => {
+    // Submit to Google Forms via Fetch API
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData
+    })
+    .then(() => {
+      // Re-enable button
       if (btnText)    btnText.style.display    = 'inline-flex';
       if (btnLoading) btnLoading.style.display = 'none';
       submitBtn.disabled = false;
+      
+      // Reset form and draft
       form.reset();
       localStorage.removeItem('bss_form_draft');
+      
+      // Show success messages
       if (successMsg) {
         successMsg.style.display = 'block';
         setTimeout(() => { successMsg.style.display = 'none'; }, 6000);
@@ -644,7 +651,16 @@ window.addEventListener('load', () => {
       if (typeof showToast === 'function') {
         showToast('success', 'Message Sent!', 'Thank you for contacting us. We will respond within 24 hours.');
       }
-    }, 1500);
+    })
+    .catch(error => {
+      console.error('Form submission error:', error);
+      if (btnText)    btnText.style.display    = 'inline-flex';
+      if (btnLoading) btnLoading.style.display = 'none';
+      submitBtn.disabled = false;
+      if (typeof showToast === 'function') {
+        showToast('error', 'Submission Failed', 'Please try again later or contact us directly.');
+      }
+    });
   });
 })();
 
