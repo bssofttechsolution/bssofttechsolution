@@ -621,11 +621,16 @@ window.addEventListener('load', () => {
 
     if (!valid) return;
 
-    // Simulate form submission
+    // Show loading UI
     if (btnText)    btnText.style.display    = 'none';
     if (btnLoading) btnLoading.style.display = 'inline-flex';
     submitBtn.disabled = true;
 
+    // Submit to Google Forms via hidden iframe
+    window.submitted = true;
+    HTMLFormElement.prototype.submit.call(form);
+
+    // Wait a brief moment to allow iframe to process the response
     setTimeout(() => {
       if (btnText)    btnText.style.display    = 'inline-flex';
       if (btnLoading) btnLoading.style.display = 'none';
@@ -639,7 +644,7 @@ window.addEventListener('load', () => {
       if (typeof showToast === 'function') {
         showToast('success', 'Message Sent!', 'Thank you for contacting us. We will respond within 24 hours.');
       }
-    }, 2000);
+    }, 1500);
   });
 })();
 
